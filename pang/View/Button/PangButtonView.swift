@@ -8,27 +8,30 @@
 import SwiftUI
 
 struct PangButtonView: View {
+    @Environment(\.colorScheme) var colorScheme
+    
+    @EnvironmentObject var pangs: Pangs
+    
+    @Binding var pangText: String
+    
     var body: some View {
-        Image(systemName: "burst")
-            .font(.title)
-            .foregroundColor(.white)
-            .padding(10)
-            .background(
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                                        Color.purple,
-                                        Color.purple.opacity(0.7),
-                                        Color.white
-                    ]),
-                    startPoint: .topLeading, endPoint: .bottomTrailing)
-                )
-            .clipShape(Circle())
-            .shadow(radius: 5)
+        Button(action: {
+            if pangText == "" { return }
+            withAnimation(.spring()) {
+                pangs.add(Pang(text: pangText))
+                pangText = ""
+                UIApplication.shared.endEditing()
+            }
+        }) {
+            Image(systemName: "burst")
+                .font(.title)
+        }
+        .buttonStyle(NeumorphismWhiteButtonStyle(shape: Circle()))
     }
 }
 
 struct PangButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        PangButtonView()
+        PangButtonView(pangText: .constant("Example"))
     }
 }

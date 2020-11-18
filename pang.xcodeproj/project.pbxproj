@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D3551FC2564035800A6EF2B /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FB2564035800A6EF2B /* Light.swift */; };
+		4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FF25640B1700A6EF2B /* BackgroundView.swift */; };
 		4D93EA262562A09600323612 /* pangApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA252562A09600323612 /* pangApp.swift */; };
 		4D93EA282562A09600323612 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA272562A09600323612 /* ContentView.swift */; };
 		4D93EA2A2562A09700323612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D93EA292562A09700323612 /* Assets.xcassets */; };
@@ -16,11 +18,25 @@
 		4D93EA402562A57000323612 /* Pangs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA3F2562A57000323612 /* Pangs.swift */; };
 		4D93EA442562AC1E00323612 /* PangButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA432562AC1E00323612 /* PangButtonView.swift */; };
 		4D93EA492562AE3400323612 /* PangInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA482562AE3400323612 /* PangInputView.swift */; };
-		4D93EA4E2562B28200323612 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA4D2562B28200323612 /* UIApplication.swift */; };
+		4D93EA4E2562B28200323612 /* UIApplication-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA4D2562B28200323612 /* UIApplication-extension.swift */; };
 		4D93EA522562B35500323612 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4D93EA512562B35500323612 /* README.md */; };
+		4D93EA572562B72400323612 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA562562B72400323612 /* CardView.swift */; };
+		4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A6D2F2563F832008DE863 /* Neumorphism.swift */; };
+		4D9A6D342563FCC2008DE863 /* Dark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A6D332563FCC2008DE863 /* Dark.swift */; };
+		4DC167FE2564D00500D792DB /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC167FD2564D00500D792DB /* TitleView.swift */; };
+		4DC168012564D25400D792DB /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168002564D25400D792DB /* LogoView.swift */; };
+		4DC168042564D29900D792DB /* BrandNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168032564D29900D792DB /* BrandNameView.swift */; };
+		4DC168072564DC9300D792DB /* RemoveButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168062564DC9300D792DB /* RemoveButtonView.swift */; };
+		4DC1680B2564DF9900D792DB /* PangListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1680A2564DF9900D792DB /* PangListView.swift */; };
+		4DE694FC256386E600FBCE31 /* Color-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE694FB256386E600FBCE31 /* Color-extension.swift */; };
+		4DE6950025638F2A00FBCE31 /* Gradient-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */; };
+		4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE695062563932500FBCE31 /* AuthorImageView.swift */; };
+		4DE6950A2563936000FBCE31 /* CardBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE695092563936000FBCE31 /* CardBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D3551FB2564035800A6EF2B /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		4D3551FF25640B1700A6EF2B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		4D93EA222562A09600323612 /* pang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D93EA252562A09600323612 /* pangApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pangApp.swift; sourceTree = "<group>"; };
 		4D93EA272562A09600323612 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,8 +48,20 @@
 		4D93EA3F2562A57000323612 /* Pangs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pangs.swift; sourceTree = "<group>"; };
 		4D93EA432562AC1E00323612 /* PangButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangButtonView.swift; sourceTree = "<group>"; };
 		4D93EA482562AE3400323612 /* PangInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangInputView.swift; sourceTree = "<group>"; };
-		4D93EA4D2562B28200323612 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		4D93EA4D2562B28200323612 /* UIApplication-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication-extension.swift"; sourceTree = "<group>"; };
 		4D93EA512562B35500323612 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4D93EA562562B72400323612 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		4D9A6D2F2563F832008DE863 /* Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neumorphism.swift; sourceTree = "<group>"; };
+		4D9A6D332563FCC2008DE863 /* Dark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dark.swift; sourceTree = "<group>"; };
+		4DC167FD2564D00500D792DB /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		4DC168002564D25400D792DB /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		4DC168032564D29900D792DB /* BrandNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandNameView.swift; sourceTree = "<group>"; };
+		4DC168062564DC9300D792DB /* RemoveButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveButtonView.swift; sourceTree = "<group>"; };
+		4DC1680A2564DF9900D792DB /* PangListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangListView.swift; sourceTree = "<group>"; };
+		4DE694FB256386E600FBCE31 /* Color-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-extension.swift"; sourceTree = "<group>"; };
+		4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient-extension.swift"; sourceTree = "<group>"; };
+		4DE695062563932500FBCE31 /* AuthorImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorImageView.swift; sourceTree = "<group>"; };
+		4DE695092563936000FBCE31 /* CardBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +75,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D3551FE25640B0600A6EF2B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4D3551FF25640B1700A6EF2B /* BackgroundView.swift */,
+				4DC167FD2564D00500D792DB /* TitleView.swift */,
+				4DC168002564D25400D792DB /* LogoView.swift */,
+				4DC168032564D29900D792DB /* BrandNameView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		4D93EA192562A09600323612 = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +105,13 @@
 		4D93EA242562A09600323612 /* pang */ = {
 			isa = PBXGroup;
 			children = (
-				4D93EA4C2562B26E00323612 /* Extensions */,
 				4D93EA3A2562A1C100323612 /* Model */,
 				4D93EA352562A10900323612 /* View */,
 				4D93EA252562A09600323612 /* pangApp.swift */,
 				4D93EA292562A09700323612 /* Assets.xcassets */,
 				4D93EA2E2562A09700323612 /* Info.plist */,
+				4D9A6D2E2563F812008DE863 /* Style */,
+				4D93EA4C2562B26E00323612 /* Extensions */,
 				4D93EA2B2562A09700323612 /* Preview Content */,
 				4D93EA512562B35500323612 /* README.md */,
 			);
@@ -89,6 +129,9 @@
 		4D93EA352562A10900323612 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4DC168092564DF7E00D792DB /* List */,
+				4D3551FE25640B0600A6EF2B /* Base */,
+				4D93EA552562B71000323612 /* Card */,
 				4D93EA472562AE2300323612 /* Input */,
 				4D93EA422562AC0300323612 /* Button */,
 				4D93EA272562A09600323612 /* ContentView.swift */,
@@ -110,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				4D93EA432562AC1E00323612 /* PangButtonView.swift */,
+				4DC168062564DC9300D792DB /* RemoveButtonView.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -125,9 +169,39 @@
 		4D93EA4C2562B26E00323612 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4D93EA4D2562B28200323612 /* UIApplication.swift */,
+				4D93EA4D2562B28200323612 /* UIApplication-extension.swift */,
+				4DE694FB256386E600FBCE31 /* Color-extension.swift */,
+				4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D93EA552562B71000323612 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				4D93EA562562B72400323612 /* CardView.swift */,
+				4DE695062563932500FBCE31 /* AuthorImageView.swift */,
+				4DE695092563936000FBCE31 /* CardBoxView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		4D9A6D2E2563F812008DE863 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				4D9A6D2F2563F832008DE863 /* Neumorphism.swift */,
+				4D9A6D332563FCC2008DE863 /* Dark.swift */,
+				4D3551FB2564035800A6EF2B /* Light.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		4DC168092564DF7E00D792DB /* List */ = {
+			isa = PBXGroup;
+			children = (
+				4DC1680A2564DF9900D792DB /* PangListView.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,14 +274,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D93EA4E2562B28200323612 /* UIApplication.swift in Sources */,
+				4DE6950025638F2A00FBCE31 /* Gradient-extension.swift in Sources */,
+				4D9A6D342563FCC2008DE863 /* Dark.swift in Sources */,
+				4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */,
+				4D93EA4E2562B28200323612 /* UIApplication-extension.swift in Sources */,
+				4D93EA572562B72400323612 /* CardView.swift in Sources */,
+				4DC167FE2564D00500D792DB /* TitleView.swift in Sources */,
+				4DE6950A2563936000FBCE31 /* CardBoxView.swift in Sources */,
+				4DC168012564D25400D792DB /* LogoView.swift in Sources */,
 				4D93EA372562A11D00323612 /* HomeView.swift in Sources */,
+				4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */,
 				4D93EA282562A09600323612 /* ContentView.swift in Sources */,
+				4DC168072564DC9300D792DB /* RemoveButtonView.swift in Sources */,
+				4DC1680B2564DF9900D792DB /* PangListView.swift in Sources */,
 				4D93EA442562AC1E00323612 /* PangButtonView.swift in Sources */,
 				4D93EA402562A57000323612 /* Pangs.swift in Sources */,
+				4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */,
 				4D93EA262562A09600323612 /* pangApp.swift in Sources */,
 				4D93EA492562AE3400323612 /* PangInputView.swift in Sources */,
 				4D93EA3C2562A1CB00323612 /* Pang.swift in Sources */,
+				4DC168042564D29900D792DB /* BrandNameView.swift in Sources */,
+				4D3551FC2564035800A6EF2B /* Light.swift in Sources */,
+				4DE694FC256386E600FBCE31 /* Color-extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

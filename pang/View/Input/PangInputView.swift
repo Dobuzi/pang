@@ -8,29 +8,27 @@
 import SwiftUI
 
 struct PangInputView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var pangs: Pangs
     @Binding var pangText: String
+    @Namespace var pangTextField
     var body: some View {
         HStack {
             TextField("Thinking out loud!", text: $pangText)
+                .frame(width: .infinity, height: .infinity)
                 .autocapitalization(.none)
                 .multilineTextAlignment(.leading)
                 .keyboardType(.twitter)
                 .lineLimit(2)
-            Button(action: {
-                pangs.add(Pang(text: pangText))
-                pangText = ""
-                UIApplication.shared.endEditing()
-                
-            }) {
-                PangButtonView()
-            }
+            PangButtonView(pangText: $pangText)
         }
+        .frame(height: 80)
         .padding()
-        .background(Color(red: 0.96, green: 0.96, blue: 0.96))
-        .cornerRadius(10)
+        .background(Color.offWhite)
+        .cornerRadius(15)
         .padding()
-        .shadow(radius: 10)
+        .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
+        .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
     }
 }
 

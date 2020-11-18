@@ -11,18 +11,21 @@ struct HomeView: View {
     @State private var pangText = ""
     @ObservedObject var pangs = Pangs()
     var body: some View {
-        VStack {
-            PangInputView(pangText: $pangText)
-            List {
-                ForEach(pangs.pangs.reversed()) { pang in
-                    Text(pang.text)
+        ZStack {
+            BackgroundView()
+            VStack {
+                HStack {
+                    TitleView()
+                    Spacer()
+                    RemoveButtonView()
                 }
+                .padding()
+                PangInputView(pangText: $pangText)
+                PangListView()
             }
         }
         .environmentObject(pangs)
-        .onTapGesture {
-            
-        }
+        
     }
 }
 

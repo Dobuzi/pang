@@ -61,4 +61,10 @@ class Pangs: ObservableObject {
         self.pangs.append(pang)
         self.saveData()
     }
+    
+    func removeAll() {
+        objectWillChange.send()
+        self.pangs.removeAll()
+        self.saveData()
+    }
 }
