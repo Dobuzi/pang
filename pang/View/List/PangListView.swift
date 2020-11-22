@@ -8,24 +8,36 @@
 import SwiftUI
 
 struct PangListView: View {
-    @EnvironmentObject var pangs: Pangs
+    @StateObject var pangInstance: PangObject
+    private let itemHeight: CGFloat = 120
+    private let scaleModifier: CGFloat = 3000
+    private let degreeModifier: Double = 20
     var body: some View {
-        ScrollView {
-            VStack(spacing: 0) {
-                ForEach(pangs.pangs.reversed()) { pang in
-                    CardView(pang: pang)
-                        .frame(height: 120)
+        GeometryReader { superGeo in
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack(spacing: 150) {
+                    ForEach(pangInstance.pangs.reversed()) { pang in
+                        GeometryReader { geo in
+                            CardView(pang: pang)
+                                .scaleEffect(1 - CGFloat(geo.frame(in: .global).minY - superGeo.frame(in: .global).minY) / scaleModifier)
+                                .rotation3DEffect(
+                                    .degrees(
+                                        -Double(
+                                            geo.frame(in: .global).minY - superGeo.frame(in: .global).minY
+                                        ) / degreeModifier
+                                    ),
+                                    axis: (x: 1.0, y: 0.0, z: 0.0))
+                        }
+                    }
+                    Spacer()
                 }
-                Spacer()
             }
         }
     }
 }
 
 struct PangListView_Previews: PreviewProvider {
-    static var pangs = Pangs()
     static var previews: some View {
-        PangListView()
-            .environmentObject(pangs)
+        PangListView(pangInstance: PangObject())
     }
 }

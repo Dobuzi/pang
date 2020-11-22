@@ -8,21 +8,37 @@
 import SwiftUI
 
 struct TitleView: View {
+    @Environment(\.colorScheme) var colorScheme
     @State private var isTapped = false
+    @State private var titleColor: Color = Color(
+        .sRGB,
+        red: Double.random(in: 0...1),
+        green: Double.random(in: 0...1),
+        blue: Double.random(in: 0...1),
+        opacity: 1
+    )
     var body: some View {
         Button(action: {
             withAnimation(.spring()) {
-                isTapped.toggle()
+                titleColor = Color(
+                    .sRGB,
+                    red: Double.random(in: 0...1),
+                    green: Double.random(in: 0...1),
+                    blue: Double.random(in: 0...1),
+                    opacity: 1
+                )
             }
         }, label: {
-            Label(title: { BrandNameView() }, icon: { LogoView() })
+            Label(title: { BrandNameView(titleColor: $titleColor) },
+                  icon: { LogoView(titleColor: $titleColor) })
         })
-        .buttonStyle(NeumorphismWhiteButtonStyle(shape: RoundedRectangle(cornerRadius: 15)))
+        .buttonStyle(NeumorphismButtonStyle(inLightMode: colorScheme == .light, shape: RoundedRectangle(cornerRadius: 15)))
     }
 }
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
         TitleView()
+            .preferredColorScheme(.dark)
     }
 }

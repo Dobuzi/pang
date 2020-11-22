@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct CardView: View {
-    @Environment(\.colorScheme) var colorScheme
-    
     let pang: Pang
     
     var formattedDate: String {
@@ -17,25 +15,19 @@ struct CardView: View {
     }
     
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                Color.offWhite
-                CardBoxView(pang: pang,
-                            formattedDate: formattedDate,
-                            backgroundColor: .offWhite)
-                .frame(width: geo.size.width * 0.85, height: 80)
-                .position(x: geo.frame(in: .local).midX, y: geo.frame(in: .local).midY)
-                HStack {
+        ZStack {
+            CardBoxView(pang: pang,
+                        formattedDate: formattedDate)
+            HStack {
+                Spacer()
+                VStack {
+                    AuthorImageView()
                     Spacer()
-                    VStack {
-                        AuthorImageView()
-                            .offset(x: -geo.size.width * 0.05, y: 10.0)
-                        Spacer()
-                    }
                 }
-                
             }
         }
+        .padding(.trailing, 15)
+        .frame(height: 120)
     }
     
     func formatDate(_ date: Date) -> String {
@@ -48,7 +40,9 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(pang: Pang(text: "Example"))
-            .frame(height: 120)
+        VStack {
+            CardView(pang: Pang(text: "Example"))
+            CardView(pang: Pang(uiImage: UIImage(systemName: "star")))
+        }
     }
 }

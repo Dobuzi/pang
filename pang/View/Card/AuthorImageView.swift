@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct AuthorImageView: View {
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
         Image(systemName: "person")
-            .font(.title2)
-            .padding(10)
-            .background(Color.offWhite)
-            .clipShape(Circle())
-            .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
-            .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
+            .font(.headline)
+            .neumorphismBackgroundStyle(inLightMode: colorScheme == .light, shape: Circle())
     }
 }
 

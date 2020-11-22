@@ -8,26 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var pangInstance = PangObject()
     var body: some View {
         ZStack {
             BackgroundView()
             TabView {
-                HomeView()
+                HomeView(pangInstance: pangInstance)
                     .tabItem { Label("Home", systemImage: "house") }
-                HomeView()
+                SettingView(pangInstance: pangInstance)
                     .tabItem { Label("Setting", systemImage: "gear") }
             }
-            .tabViewStyle(PageTabViewStyle())
         }
-        .onTapGesture {
-            UIApplication.shared.endEditing()
-        }
+        .environmentObject(pangInstance)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.light)
             
     }
 }

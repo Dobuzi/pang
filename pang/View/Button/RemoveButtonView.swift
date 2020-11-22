@@ -8,22 +8,26 @@
 import SwiftUI
 
 struct RemoveButtonView: View {
-    @EnvironmentObject var pangs: Pangs
+    @Environment(\.colorScheme) var colorScheme
+    let systemImage: String
+    let content: () -> Void
+    
     var body: some View {
         Button(action: {
             withAnimation {
-                pangs.removeAll()
+                self.content()
             }
         }, label: {
-            Image(systemName: "trash.circle")
-                .font(.largeTitle)
+            Image(systemName: systemImage)
+                .font(.title)
         })
-        .buttonStyle(NeumorphismWhiteButtonStyle(shape: Circle()))
+        .buttonStyle(NeumorphismButtonStyle(inLightMode: colorScheme == .light, shape: Circle()))
     }
 }
 
 struct RemoveButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        RemoveButtonView()
+        RemoveButtonView(systemImage: "trash.circle") {
+        }
     }
 }

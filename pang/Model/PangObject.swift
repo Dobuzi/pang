@@ -1,5 +1,5 @@
 //
-//  Pangs.swift
+//  PangObject.swift
 //  pang
 //
 //  Created by 김종원 on 2020/11/16.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Pangs: ObservableObject {
+class PangObject: ObservableObject {
     private(set) var pangs: [Pang]
     
     private let saveKey: String = "Pangs"
@@ -43,9 +43,10 @@ class Pangs: ObservableObject {
     func saveData() {
         let path: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let fileName: URL = path.appendingPathComponent(self.saveKey)
-
+        
         let encoder = JSONEncoder()
         guard let encoded = try? encoder.encode(self.pangs) else {
+            print("\(self.pangs)")
             print("Can't encode data to bundle.")
             return
         }
@@ -62,9 +63,23 @@ class Pangs: ObservableObject {
         self.saveData()
     }
     
-    func removeAll() {
+    func removePangs() {
         objectWillChange.send()
         self.pangs.removeAll()
         self.saveData()
+    }
+    
+    func removeCache() {
+        let path: URL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileName: URL = path.appendingPathComponent(self.saveKey)
+        
+        objectWillChange.send()
+        
+        do {
+            try FileManager.default.removeItem(at: fileName)
+        } catch {
+            print("Can't delete data from bundle.")
+        }
+        self.pangs.removeAll()
     }
 }

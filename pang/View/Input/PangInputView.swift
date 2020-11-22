@@ -9,31 +9,48 @@ import SwiftUI
 
 struct PangInputView: View {
     @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject var pangs: Pangs
-    @Binding var pangText: String
-    @Namespace var pangTextField
+    @StateObject var pangInstance: PangObject
+//    @State private var inputType = "Text"
+    @State private var showingImageInputForm = false
+    @State private var pangText: String = ""
+    @State private var inputImage: UIImage?
+    @State private var image: Image?
+    
     var body: some View {
-        HStack {
-            TextField("Thinking out loud!", text: $pangText)
-                .frame(width: .infinity, height: .infinity)
-                .autocapitalization(.none)
-                .multilineTextAlignment(.leading)
-                .keyboardType(.twitter)
-                .lineLimit(2)
-            PangButtonView(pangText: $pangText)
+        VStack(spacing: 0) {
+            HStack {
+                PangTextFieldView(pangInstance: pangInstance, pangText: $pangText)
+                PangButtonView(pangInstance: pangInstance,
+                               pangText: $pangText,
+                               inputImage: $inputImage,
+                               image: $image)
+            }
+            VStack {
+                PangImageInputView(showingImageInputForm: $showingImageInputForm, image: $image, inputImage: $inputImage)
+                Button(action: {
+                    withAnimation {
+                        showingImageInputForm.toggle()
+                    }
+                }) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(Color.offWhite)
+                            .frame(width: 320, height: 30)
+                        Image(systemName: showingImageInputForm ? "chevron.up" : "chevron.down")
+                    }
+                    
+                }
+            }
         }
-        .frame(height: 80)
+        .neumorphismBackgroundStyle(inLightMode: colorScheme == .light, shape: RoundedRectangle(cornerRadius: 15))
         .padding()
-        .background(Color.offWhite)
-        .cornerRadius(15)
-        .padding()
-        .shadow(color: Color.white.opacity(0.7), radius: 10, x: 10, y: 10)
-        .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
     }
 }
 
 struct PangInputView_Previews: PreviewProvider {
     static var previews: some View {
-        PangInputView(pangText: .constant(""))
+        PangInputView(pangInstance: PangObject())
+            
+            
     }
 }

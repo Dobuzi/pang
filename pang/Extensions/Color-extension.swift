@@ -8,6 +8,8 @@
 import SwiftUI
 
 extension Color {
+    static let offPurple = Color(.sRGB, red: 108 / 255, green: 92 / 255, blue: 231 / 255, opacity: 1)
+    
     static let offWhite = Color(.sRGB, red: 225 / 255, green: 225 / 255, blue: 235 / 255)
     
     static let darkStart = Color(red: 50 / 255, green: 60 / 255, blue: 65 / 255)
