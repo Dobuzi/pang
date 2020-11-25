@@ -9,40 +9,43 @@ import SwiftUI
 
 struct CardView: View {
     let pang: Pang
-    
     var formattedDate: String {
         self.formatDate(pang.currentDate)
     }
     
     var body: some View {
-        ZStack {
-            CardBoxView(pang: pang,
-                        formattedDate: formattedDate)
-            HStack {
+        HStack(alignment: .top) {
+            CardContentView(pang: pang)
+            VStack(alignment: .trailing) {
+                AuthorImageView()
                 Spacer()
-                VStack {
-                    AuthorImageView()
-                    Spacer()
-                }
+                Text(formattedDate)
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
             }
         }
-        .padding(.trailing, 15)
-        .frame(height: 120)
+        .padding()
+        .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 15))
+        .frame(height: pang.images.count > 0 ? (pang.text != nil ? 180 : 100) : 120)
+        .padding(5)
     }
     
     func formatDate(_ date: Date) -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .none
-        formatter.timeStyle = .medium
+        formatter.timeStyle = .short
         return formatter.string(from: date)
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        VStack {
-            CardView(pang: Pang(text: "Example"))
-            CardView(pang: Pang(uiImage: UIImage(systemName: "star")))
+        ScrollView {
+            LazyVStack {
+                ForEach(PangObject.example.pangs) { pang in
+                    CardView(pang: pang)
+                }
+            }
         }
     }
 }

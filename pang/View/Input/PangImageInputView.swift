@@ -8,51 +8,33 @@
 import SwiftUI
 
 struct PangImageInputView: View {
-    @Binding var showingImageInputForm: Bool
-    @Binding var image: Image?
-    @Binding var inputImage: UIImage?
-    
-    @State private var showingImagePicker = false
+    @Binding var inputImages: [UIImage]
     
     var body: some View {
-        Group {
-            if let image = image {
-                image
-                    .resizable()
-                    .scaledToFit()
-                    .cornerRadius(15)
-            } else {
-                Text("+ Image")
-                    .font(.headline)
-                    .foregroundColor(.accentColor)
+        ScrollView(.horizontal, showsIndicators: false) {
+            LazyHStack {
+                ForEach(inputImages, id: \.self) { uiImage in
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 90 * 2)
+                        .cornerRadius(5)
+                        .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 5))
+                }
             }
         }
-        .frame(width: showingImageInputForm ? 320 : 0, height: showingImageInputForm ? 180 : 0)
-        .background(RoundedRectangle(cornerRadius: 15)
-                        .stroke(Color.gray.opacity(0.8),
-                                style: StrokeStyle(lineWidth: 1, dash: [image != nil ? 0 : 10])))
-        .onTapGesture {
-            self.showingImagePicker = true
-        }
-        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage)  {
-            ImagePicker(image: self.$inputImage)
-        }
-    }
-    
-    func loadImage() {
-        guard let inputImage = self.inputImage else { return }
-        guard let compressedImageData = inputImage.jpegData(compressionQuality: 0.25) else { return }
-        guard let uiImage = UIImage(data: compressedImageData) else { return }
-        self.inputImage = uiImage
-        self.image = Image(uiImage: uiImage)
+        .frame(height: 90 * 2 + 60)
     }
 }
 
 struct PangImageInputView_Previews: PreviewProvider {
-    @State static var showingImageInputForm: Bool = true
-    @State static var image: Image? = nil
-    @State static var inputImage: UIImage? = nil
+    @State static var inputImages: [UIImage] = [
+        UIImage(imageLiteralResourceName: "sample-s"),
+        UIImage(imageLiteralResourceName: "sample-h"),
+        UIImage(imageLiteralResourceName: "sample-v")
+    ]
+    
     static var previews: some View {
-        PangImageInputView(showingImageInputForm: $showingImageInputForm, image: $image, inputImage: $inputImage)
+        PangImageInputView(inputImages: $inputImages)
     }
 }

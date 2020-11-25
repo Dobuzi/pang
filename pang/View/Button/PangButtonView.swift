@@ -8,40 +8,40 @@
 import SwiftUI
 
 struct PangButtonView: View {
-    @Environment(\.colorScheme) var colorScheme
-    
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var pangInstance: PangObject
     
     @Binding var pangText: String
-    @Binding var inputImage: UIImage?
-    @Binding var image: Image?
+    @Binding var inputImages: [UIImage]
     
     var body: some View {
         Button(action: self.uploadPang) {
-            Image(systemName: "burst")
-                .font(.headline)
+            HStack {
+                Label(
+                    title: { Text("Pang!") },
+                    icon: { Image(systemName: "burst") }
+                )
+            }
         }
-        .buttonStyle(NeumorphismButtonStyle(inLightMode: colorScheme == .light, shape: Circle()))
+        .buttonStyle(CardButtonStyle(shape: Capsule()))
     }
     
     func uploadPang() {
-        guard pangText != "" || inputImage != nil else { return }
         withAnimation(.spring()) {
-            pangInstance.add(Pang(text: pangText, uiImage: inputImage))
-            inputImage = nil
-            image = nil
+            pangInstance.add(Pang(text: pangText == "" ? nil : pangText, images: inputImages))
+            inputImages = []
             pangText = ""
             UIApplication.shared.endEditing()
         }
+        self.presentationMode.wrappedValue.dismiss()
     }
 }
 
 struct PangButtonView_Previews: PreviewProvider {
     @State static var inputType: String = "Text"
     @State static var pangText: String = ""
-    @State static var inputImage: UIImage? = nil
-    @State static var image: Image? = nil
+    @State static var inputImages: [UIImage] = []
     static var previews: some View {
-        PangButtonView(pangInstance: PangObject(), pangText: $pangText, inputImage: $inputImage, image: $image)
+        PangButtonView(pangInstance: PangObject(), pangText: $pangText, inputImages: $inputImages)
     }
 }

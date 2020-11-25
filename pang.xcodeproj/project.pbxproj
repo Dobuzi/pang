@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D176D35256A91CE00495876 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D176D34256A91CE00495876 /* CardModifier.swift */; };
 		4D270DEA25654EC300D78D19 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D270DE925654EC300D78D19 /* SettingView.swift */; };
 		4D3551FC2564035800A6EF2B /* Light-Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */; };
 		4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FF25640B1700A6EF2B /* BackgroundView.swift */; };
 		4D7C6C9A2566A70C0041524F /* PangImageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C6C992566A70C0041524F /* PangImageInputView.swift */; };
 		4D7C6C9D2566B0E10041524F /* InputTypePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C6C9C2566B0E10041524F /* InputTypePickerView.swift */; };
 		4D82C2F42569DA840048E94A /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82C2F32569DA840048E94A /* CardContentView.swift */; };
-		4D82C2F9256A10880048E94A /* Light-Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82C2F8256A10880048E94A /* Light-Card.swift */; };
+		4D82C2F9256A10880048E94A /* CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82C2F8256A10880048E94A /* CardStyle.swift */; };
 		4D93EA262562A09600323612 /* pangApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA252562A09600323612 /* pangApp.swift */; };
 		4D93EA282562A09600323612 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA272562A09600323612 /* ContentView.swift */; };
 		4D93EA2A2562A09700323612 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D93EA292562A09700323612 /* Assets.xcassets */; };
@@ -28,10 +29,14 @@
 		4D93EA572562B72400323612 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA562562B72400323612 /* CardView.swift */; };
 		4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A6D2F2563F832008DE863 /* Neumorphism.swift */; };
 		4D9A6D342563FCC2008DE863 /* Dark-Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A6D332563FCC2008DE863 /* Dark-Neumorphism.swift */; };
+		4DB00E15256E2585007B3DC4 /* FullSizeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */; };
+		4DB1A260256B881B00EC94A8 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */; };
+		4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */; };
+		4DB1A266256B8FE300EC94A8 /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A265256B8FE300EC94A8 /* ImageButtonView.swift */; };
 		4DC167FE2564D00500D792DB /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC167FD2564D00500D792DB /* TitleView.swift */; };
 		4DC168012564D25400D792DB /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168002564D25400D792DB /* LogoView.swift */; };
 		4DC168042564D29900D792DB /* BrandNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168032564D29900D792DB /* BrandNameView.swift */; };
-		4DC168072564DC9300D792DB /* RemoveButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168062564DC9300D792DB /* RemoveButtonView.swift */; };
+		4DC168072564DC9300D792DB /* SystemImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168062564DC9300D792DB /* SystemImageButtonView.swift */; };
 		4DC1680B2564DF9900D792DB /* PangListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1680A2564DF9900D792DB /* PangListView.swift */; };
 		4DC168112564E73A00D792DB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168102564E73A00D792DB /* ImagePicker.swift */; };
 		4DC168142564E7E700D792DB /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168132564E7E700D792DB /* ImageSaver.swift */; };
@@ -40,17 +45,17 @@
 		4DE694FC256386E600FBCE31 /* Color-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE694FB256386E600FBCE31 /* Color-extension.swift */; };
 		4DE6950025638F2A00FBCE31 /* Gradient-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */; };
 		4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE695062563932500FBCE31 /* AuthorImageView.swift */; };
-		4DE6950A2563936000FBCE31 /* CardBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE695092563936000FBCE31 /* CardBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D176D34256A91CE00495876 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 		4D270DE925654EC300D78D19 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Light-Neumorphism.swift"; sourceTree = "<group>"; };
 		4D3551FF25640B1700A6EF2B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		4D7C6C992566A70C0041524F /* PangImageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangImageInputView.swift; sourceTree = "<group>"; };
 		4D7C6C9C2566B0E10041524F /* InputTypePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTypePickerView.swift; sourceTree = "<group>"; };
 		4D82C2F32569DA840048E94A /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
-		4D82C2F8256A10880048E94A /* Light-Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Light-Card.swift"; sourceTree = "<group>"; };
+		4D82C2F8256A10880048E94A /* CardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStyle.swift; sourceTree = "<group>"; };
 		4D93EA222562A09600323612 /* pang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D93EA252562A09600323612 /* pangApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pangApp.swift; sourceTree = "<group>"; };
 		4D93EA272562A09600323612 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,10 +72,14 @@
 		4D93EA562562B72400323612 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4D9A6D2F2563F832008DE863 /* Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neumorphism.swift; sourceTree = "<group>"; };
 		4D9A6D332563FCC2008DE863 /* Dark-Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dark-Neumorphism.swift"; sourceTree = "<group>"; };
+		4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeImageView.swift; sourceTree = "<group>"; };
+		4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
+		4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButtonView.swift; sourceTree = "<group>"; };
+		4DB1A265256B8FE300EC94A8 /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
 		4DC167FD2564D00500D792DB /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		4DC168002564D25400D792DB /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		4DC168032564D29900D792DB /* BrandNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandNameView.swift; sourceTree = "<group>"; };
-		4DC168062564DC9300D792DB /* RemoveButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveButtonView.swift; sourceTree = "<group>"; };
+		4DC168062564DC9300D792DB /* SystemImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImageButtonView.swift; sourceTree = "<group>"; };
 		4DC1680A2564DF9900D792DB /* PangListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangListView.swift; sourceTree = "<group>"; };
 		4DC168102564E73A00D792DB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4DC168132564E7E700D792DB /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
@@ -79,7 +88,6 @@
 		4DE694FB256386E600FBCE31 /* Color-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-extension.swift"; sourceTree = "<group>"; };
 		4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient-extension.swift"; sourceTree = "<group>"; };
 		4DE695062563932500FBCE31 /* AuthorImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorImageView.swift; sourceTree = "<group>"; };
-		4DE695092563936000FBCE31 /* CardBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,8 @@
 				4DC167FD2564D00500D792DB /* TitleView.swift */,
 				4DC168002564D25400D792DB /* LogoView.swift */,
 				4DC168032564D29900D792DB /* BrandNameView.swift */,
+				4DC168062564DC9300D792DB /* SystemImageButtonView.swift */,
+				4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -126,7 +136,8 @@
 		4D82C2F7256A10610048E94A /* Card */ = {
 			isa = PBXGroup;
 			children = (
-				4D82C2F8256A10880048E94A /* Light-Card.swift */,
+				4D176D34256A91CE00495876 /* CardModifier.swift */,
+				4D82C2F8256A10880048E94A /* CardStyle.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -199,8 +210,10 @@
 			isa = PBXGroup;
 			children = (
 				4D93EA432562AC1E00323612 /* PangButtonView.swift */,
-				4DC168062564DC9300D792DB /* RemoveButtonView.swift */,
 				4D7C6C9C2566B0E10041524F /* InputTypePickerView.swift */,
+				4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */,
+				4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */,
+				4DB1A265256B8FE300EC94A8 /* ImageButtonView.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -231,7 +244,6 @@
 			children = (
 				4D93EA562562B72400323612 /* CardView.swift */,
 				4DE695062563932500FBCE31 /* AuthorImageView.swift */,
-				4DE695092563936000FBCE31 /* CardBoxView.swift */,
 				4D82C2F32569DA840048E94A /* CardContentView.swift */,
 			);
 			path = Card;
@@ -342,26 +354,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DE6950025638F2A00FBCE31 /* Gradient-extension.swift in Sources */,
+				4DB00E15256E2585007B3DC4 /* FullSizeImageView.swift in Sources */,
 				4D9A6D342563FCC2008DE863 /* Dark-Neumorphism.swift in Sources */,
 				4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */,
+				4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */,
 				4D93EA4E2562B28200323612 /* UIApplication-extension.swift in Sources */,
 				4D93EA572562B72400323612 /* CardView.swift in Sources */,
 				4DC167FE2564D00500D792DB /* TitleView.swift in Sources */,
 				4D270DEA25654EC300D78D19 /* SettingView.swift in Sources */,
 				4DCC7363256623490091878A /* View-extension.swift in Sources */,
-				4DE6950A2563936000FBCE31 /* CardBoxView.swift in Sources */,
 				4D7C6C9D2566B0E10041524F /* InputTypePickerView.swift in Sources */,
-				4D82C2F9256A10880048E94A /* Light-Card.swift in Sources */,
+				4DB1A266256B8FE300EC94A8 /* ImageButtonView.swift in Sources */,
+				4D82C2F9256A10880048E94A /* CardStyle.swift in Sources */,
 				4DC168142564E7E700D792DB /* ImageSaver.swift in Sources */,
 				4DC168012564D25400D792DB /* LogoView.swift in Sources */,
 				4D93EA372562A11D00323612 /* HomeView.swift in Sources */,
 				4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */,
+				4DB1A260256B881B00EC94A8 /* AddButtonView.swift in Sources */,
 				4D93EA282562A09600323612 /* ContentView.swift in Sources */,
-				4DC168072564DC9300D792DB /* RemoveButtonView.swift in Sources */,
+				4DC168072564DC9300D792DB /* SystemImageButtonView.swift in Sources */,
 				4DCC736025661D0C0091878A /* PangTextFieldView.swift in Sources */,
 				4DC1680B2564DF9900D792DB /* PangListView.swift in Sources */,
 				4DC168112564E73A00D792DB /* ImagePicker.swift in Sources */,
 				4D93EA442562AC1E00323612 /* PangButtonView.swift in Sources */,
+				4D176D35256A91CE00495876 /* CardModifier.swift in Sources */,
 				4D93EA402562A57000323612 /* PangObject.swift in Sources */,
 				4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */,
 				4D82C2F42569DA840048E94A /* CardContentView.swift in Sources */,

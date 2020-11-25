@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class PangObject: ObservableObject {
     private(set) var pangs: [Pang]
@@ -81,5 +82,15 @@ class PangObject: ObservableObject {
             print("Can't delete data from bundle.")
         }
         self.pangs.removeAll()
+    }
+    
+    static var example: PangObject {
+        let example = PangObject()
+        example.add(Pang(text: "Example0"))
+        example.add(Pang(text: "Example1", images: [UIImage(imageLiteralResourceName: "sample-v")]))
+        example.add(Pang(text: "Example2", images: [UIImage(imageLiteralResourceName: "sample-s")]))
+        example.add(Pang(images: [UIImage(imageLiteralResourceName: "sample-h")]))
+        example.add(Pang(text: "Example3", images: [UIImage(imageLiteralResourceName: "sample-s")]))
+        return example
     }
 }

@@ -6,25 +6,39 @@
 //
 
 import SwiftUI
+import Combine
 
 struct PangTextFieldView: View {
     @StateObject var pangInstance: PangObject
     @Binding var pangText: String
+    let wordLimit: Int = 40
+    var isFull: Bool {
+        pangText.count > wordLimit
+    }
     var body: some View {
-        TextField("적는 공간", text: $pangText)
-            .autocapitalization(.none)
-            .multilineTextAlignment(.leading)
-            .keyboardType(.twitter)
-            // style
-            .frame(height: 90)
-            .padding(.horizontal)
+        VStack(alignment: .trailing, spacing: 10) {
+            TextEditor(text: $pangText)
+                .autocapitalization(.none)
+                .keyboardType(.twitter)
+                .frame(height: 90)
+                .cornerRadius(5)
+                .onReceive(Just(self.pangText)) { input in
+                    if isFull {
+                        self.pangText.removeLast()
+                    }
+                }
+                
+            Text("\(pangText.count) / \(wordLimit)")
+                .foregroundColor(.secondary)
+                .font(.subheadline)
+        }
     }
 }
 
 struct PangTextFieldView_Previews: PreviewProvider {
-    static var pangText: String = ""
+    @State static var pangText: String = ""
     static var previews: some View {
-        return PangTextFieldView(pangInstance: PangObject(), pangText: .constant(""))
+        return PangTextFieldView(pangInstance: PangObject(), pangText: $pangText)
             
     }
 }

@@ -9,16 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var pangInstance = PangObject()
+    
+    init() {
+        UITabBar.appearance().barTintColor = UIColor(named: "BackgroundContent")
+    }
+    
     var body: some View {
-        ZStack {
-            BackgroundView()
-            TabView {
-                HomeView(pangInstance: pangInstance)
-                    .tabItem { Label("Home", systemImage: "house") }
-                SettingView(pangInstance: pangInstance)
-                    .tabItem { Label("Setting", systemImage: "gear") }
-            }
+        TabView {
+            HomeView(pangInstance: pangInstance)
+                .tabItem { Label("Home", systemImage: "house") }
+            SettingView(pangInstance: pangInstance)
+                .tabItem { Label("Setting", systemImage: "gear") }
         }
+        .tabViewStyle(DefaultTabViewStyle())
         .environmentObject(pangInstance)
     }
 }
@@ -26,7 +29,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .preferredColorScheme(.light)
-            
     }
 }

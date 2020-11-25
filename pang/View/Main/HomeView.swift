@@ -9,32 +9,25 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject var pangInstance: PangObject
+    @State private var showingSheet = false
     var body: some View {
-        ZStack {
-            BackgroundView()
-            VStack {
-                HStack {
-                    TitleView()
-                    Spacer()
-                    RemoveButtonView(systemImage: "arrow.clockwise") {
-                        self.pangInstance.removePangs()
-                    }
-                }
-                .padding()
-                PangInputView(pangInstance: pangInstance)
+        NavigationView {
+            ZStack {
+                BackgroundView()
                 PangListView(pangInstance: pangInstance)
-                    .padding(.top, 30)
+                    .navigationBarTitle("Pang!", displayMode: .large)
+                    .navigationBarItems(trailing: AddButtonView(showingSheet: $showingSheet))
+                    .sheet(isPresented: $showingSheet) {
+                        PangInputView(pangInstance: pangInstance)
+                    }
             }
-        }
-        .onTapGesture {
-            UIApplication.shared.endEditing()
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(pangInstance: PangObject())
+        HomeView(pangInstance: PangObject.example)
             .preferredColorScheme(.dark)
     }
 }

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct InputTypePickerView: View {
-    @Environment(\.colorScheme) var colorScheme
     @Binding var inputType: String
     var body: some View {
         Picker(selection: $inputType, label: Text("Input Type"), content: {
@@ -17,7 +16,7 @@ struct InputTypePickerView: View {
         })
         .pickerStyle(InlinePickerStyle())
         .frame(height: 80)
-        .neumorphismBackgroundStyle(inLightMode: colorScheme == .light, shape: RoundedRectangle(cornerRadius: 15))
+        .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 15))
         .padding()
         
     }

@@ -26,7 +26,7 @@ struct NeumorphismButtonStyle<S: Shape>: ButtonStyle {
     }
 }
 
-struct NeumorphismBackgroundStyle<S: Shape>: ViewModifier {
+struct NeumorphismBackgroundStyleModifier<S: Shape>: ViewModifier {
     var inLightMode: Bool
     var shape: S
     func body(content: Content) -> some View {

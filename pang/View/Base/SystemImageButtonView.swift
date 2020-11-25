@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct RemoveButtonView: View {
-    @Environment(\.colorScheme) var colorScheme
+struct SystemImageButtonView: View {
     let systemImage: String
     let content: () -> Void
     
@@ -19,15 +18,15 @@ struct RemoveButtonView: View {
             }
         }, label: {
             Image(systemName: systemImage)
-                .font(.title)
+                .font(.headline)
         })
-        .buttonStyle(NeumorphismButtonStyle(inLightMode: colorScheme == .light, shape: Circle()))
+        .buttonStyle(CardButtonStyle(shape: Circle()))
     }
 }
 
-struct RemoveButtonView_Previews: PreviewProvider {
+struct SystemImageButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        RemoveButtonView(systemImage: "trash.circle") {
+        SystemImageButtonView(systemImage: "trash") {
         }
     }
 }

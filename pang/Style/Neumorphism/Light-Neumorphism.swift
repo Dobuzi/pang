@@ -30,8 +30,8 @@ struct OffWhiteBackground<S: Shape>: View {
                             .offset(x: -2, y: -2)
                             .mask(shape.fill(LinearGradient(Color.clear, Color.black)))
                     )
-                    .shadow(color: .black, radius: 10, x: -5, y: -5)
-                    .shadow(color: .white, radius: 10, x: 5, y: 5)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10, x: -5, y: -5)
+                    .shadow(color: Color.white.opacity(0.7), radius: 10, x: 5, y: 5)
             } else {
                 shape
                     .fill(Color.offWhite)
