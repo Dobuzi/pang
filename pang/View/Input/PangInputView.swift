@@ -6,29 +6,31 @@
 //
 
 import SwiftUI
+import Combine
 
 struct PangInputView: View {
     @Binding var pangs: Pangs
     @State private var pangText: String = ""
     @State private var inputImages: [UIImage] = []
     
+    @State private var keyboardHeight: CGFloat = 0
+    
     var body: some View {
         ZStack {
             BackgroundView()
-            VStack(spacing: 30) {
-                HStack {
-                    CancelButtonView()
+            ZStack(alignment: .bottomTrailing) {
+                VStack(spacing: 20) {
+                    HStack {
+                        CancelButtonView()
+                        Spacer()
+                        PangButtonView(pangs: $pangs, pangText: $pangText, inputImages: $inputImages)
+                            .disabled(pangText == "" && inputImages.count == 0)
+                    }
+                    PangTextFieldView(pangText: $pangText)
+                    PangImageInputView(inputImages: $inputImages)
                     Spacer()
-                    PangButtonView(pangs: $pangs, pangText: $pangText, inputImages: $inputImages)
-                        .disabled(pangText == "" && inputImages.count == 0)
                 }
-                PangTextFieldView(pangText: $pangText)
-                PangImageInputView(inputImages: $inputImages)
-                Spacer()
-                HStack {
-                    Spacer()
-                    ImageButtonView(inputImages: $inputImages)
-                }
+                ImageButtonView(inputImages: $inputImages)
             }
             .padding()
         }

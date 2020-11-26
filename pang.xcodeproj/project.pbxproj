@@ -29,6 +29,8 @@
 		4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A6D2F2563F832008DE863 /* Neumorphism.swift */; };
 		4D9A6D342563FCC2008DE863 /* Dark-Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A6D332563FCC2008DE863 /* Dark-Neumorphism.swift */; };
 		4DA05AB4256F7090004E8859 /* Pangs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05AB3256F7090004E8859 /* Pangs.swift */; };
+		4DA05AB8256F780F004E8859 /* Publishers-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05AB7256F780F004E8859 /* Publishers-extension.swift */; };
+		4DA05ABB256F7937004E8859 /* Notification-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05ABA256F7937004E8859 /* Notification-extension.swift */; };
 		4DB00E15256E2585007B3DC4 /* FullSizeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */; };
 		4DB1A260256B881B00EC94A8 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */; };
 		4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */; };
@@ -72,6 +74,8 @@
 		4D9A6D2F2563F832008DE863 /* Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neumorphism.swift; sourceTree = "<group>"; };
 		4D9A6D332563FCC2008DE863 /* Dark-Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dark-Neumorphism.swift"; sourceTree = "<group>"; };
 		4DA05AB3256F7090004E8859 /* Pangs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pangs.swift; sourceTree = "<group>"; };
+		4DA05AB7256F780F004E8859 /* Publishers-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publishers-extension.swift"; sourceTree = "<group>"; };
+		4DA05ABA256F7937004E8859 /* Notification-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification-extension.swift"; sourceTree = "<group>"; };
 		4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeImageView.swift; sourceTree = "<group>"; };
 		4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
 		4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButtonView.swift; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				4DE694FB256386E600FBCE31 /* Color-extension.swift */,
 				4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */,
 				4DCC7362256623490091878A /* View-extension.swift */,
+				4DA05AB7256F780F004E8859 /* Publishers-extension.swift */,
+				4DA05ABA256F7937004E8859 /* Notification-extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -359,6 +365,7 @@
 				4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */,
 				4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */,
 				4D93EA4E2562B28200323612 /* UIApplication-extension.swift in Sources */,
+				4DA05ABB256F7937004E8859 /* Notification-extension.swift in Sources */,
 				4D93EA572562B72400323612 /* CardView.swift in Sources */,
 				4DA05AB4256F7090004E8859 /* Pangs.swift in Sources */,
 				4DC167FE2564D00500D792DB /* TitleView.swift in Sources */,
@@ -381,6 +388,7 @@
 				4D176D35256A91CE00495876 /* CardModifier.swift in Sources */,
 				4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */,
 				4D82C2F42569DA840048E94A /* CardContentView.swift in Sources */,
+				4DA05AB8256F780F004E8859 /* Publishers-extension.swift in Sources */,
 				4D93EA262562A09600323612 /* pangApp.swift in Sources */,
 				4D93EA492562AE3400323612 /* PangInputView.swift in Sources */,
 				4D93EA3C2562A1CB00323612 /* Pang.swift in Sources */,

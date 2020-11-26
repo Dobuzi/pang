@@ -17,12 +17,11 @@ struct PangImageInputView: View {
                     Image(uiImage: uiImage)
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 90 * 2)
                         .cornerRadius(5)
                 }
             }
         }
-        .frame(height: 90 * 2 + 60)
+        .frame(height: 200)
     }
 }
 

@@ -17,7 +17,6 @@ struct ContentView: View {
             SettingView(pangs: $pangs)
                 .tabItem { Label("Setting", systemImage: "gear") }
         }
-        .tabViewStyle(DefaultTabViewStyle())
         .onAppear {
             UITabBar.appearance().barTintColor = UIColor(named: "Background")
         }

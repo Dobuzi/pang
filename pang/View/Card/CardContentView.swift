@@ -24,14 +24,13 @@ struct CardContentView: View {
                                 Image(uiImage: uiImage)
                                     .resizable()
                                     .scaledToFit()
-                                    .frame(height: 90)
                                     .cornerRadius(5)
                             }
+                            .frame(height: 100)
                         }
                     }
                 }
             }
-            Spacer()
         }
     }
 }

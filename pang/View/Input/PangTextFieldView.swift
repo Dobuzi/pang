@@ -27,7 +27,8 @@ struct PangTextFieldView: View {
                 TextEditor(text: $pangText)
                     .autocapitalization(.none)
                     .keyboardType(.twitter)
-                    .frame(height: 90)
+                    .font(.headline)
+                    .frame(height: 30)
                     .opacity(0.7)
                     .onReceive(Just(self.pangText)) { input in
                         if isFull {

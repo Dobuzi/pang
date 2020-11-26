@@ -15,11 +15,11 @@ struct HomeView: View {
             ZStack {
                 BackgroundView()
                 PangListView(pangs: $pangs)
-                    .navigationBarTitle("Pang!", displayMode: .large)
-                    .navigationBarItems(trailing: AddButtonView(showingSheet: $showingSheet))
-                    .sheet(isPresented: $showingSheet) {
-                        PangInputView(pangs: $pangs)
-                    }
+            }
+            .navigationBarTitle("pang!", displayMode: .large)
+            .navigationBarItems(trailing: AddButtonView(showingSheet: $showingSheet))
+            .sheet(isPresented: $showingSheet) {
+                PangInputView(pangs: $pangs)
             }
         }
     }
