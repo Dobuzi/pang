@@ -21,7 +21,6 @@
 		4D93EA2D2562A09700323612 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D93EA2C2562A09700323612 /* Preview Assets.xcassets */; };
 		4D93EA372562A11D00323612 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA362562A11D00323612 /* HomeView.swift */; };
 		4D93EA3C2562A1CB00323612 /* Pang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA3B2562A1CB00323612 /* Pang.swift */; };
-		4D93EA402562A57000323612 /* PangObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA3F2562A57000323612 /* PangObject.swift */; };
 		4D93EA442562AC1E00323612 /* PangButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA432562AC1E00323612 /* PangButtonView.swift */; };
 		4D93EA492562AE3400323612 /* PangInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA482562AE3400323612 /* PangInputView.swift */; };
 		4D93EA4E2562B28200323612 /* UIApplication-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA4D2562B28200323612 /* UIApplication-extension.swift */; };
@@ -29,6 +28,7 @@
 		4D93EA572562B72400323612 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA562562B72400323612 /* CardView.swift */; };
 		4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A6D2F2563F832008DE863 /* Neumorphism.swift */; };
 		4D9A6D342563FCC2008DE863 /* Dark-Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A6D332563FCC2008DE863 /* Dark-Neumorphism.swift */; };
+		4DA05AB4256F7090004E8859 /* Pangs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05AB3256F7090004E8859 /* Pangs.swift */; };
 		4DB00E15256E2585007B3DC4 /* FullSizeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */; };
 		4DB1A260256B881B00EC94A8 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */; };
 		4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */; };
@@ -64,7 +64,6 @@
 		4D93EA2E2562A09700323612 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D93EA362562A11D00323612 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4D93EA3B2562A1CB00323612 /* Pang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pang.swift; sourceTree = "<group>"; };
-		4D93EA3F2562A57000323612 /* PangObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangObject.swift; sourceTree = "<group>"; };
 		4D93EA432562AC1E00323612 /* PangButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangButtonView.swift; sourceTree = "<group>"; };
 		4D93EA482562AE3400323612 /* PangInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangInputView.swift; sourceTree = "<group>"; };
 		4D93EA4D2562B28200323612 /* UIApplication-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication-extension.swift"; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		4D93EA562562B72400323612 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4D9A6D2F2563F832008DE863 /* Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neumorphism.swift; sourceTree = "<group>"; };
 		4D9A6D332563FCC2008DE863 /* Dark-Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dark-Neumorphism.swift"; sourceTree = "<group>"; };
+		4DA05AB3256F7090004E8859 /* Pangs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pangs.swift; sourceTree = "<group>"; };
 		4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeImageView.swift; sourceTree = "<group>"; };
 		4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
 		4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButtonView.swift; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				4D93EA3B2562A1CB00323612 /* Pang.swift */,
-				4D93EA3F2562A57000323612 /* PangObject.swift */,
+				4DA05AB3256F7090004E8859 /* Pangs.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -360,6 +360,7 @@
 				4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */,
 				4D93EA4E2562B28200323612 /* UIApplication-extension.swift in Sources */,
 				4D93EA572562B72400323612 /* CardView.swift in Sources */,
+				4DA05AB4256F7090004E8859 /* Pangs.swift in Sources */,
 				4DC167FE2564D00500D792DB /* TitleView.swift in Sources */,
 				4D270DEA25654EC300D78D19 /* SettingView.swift in Sources */,
 				4DCC7363256623490091878A /* View-extension.swift in Sources */,
@@ -378,7 +379,6 @@
 				4DC168112564E73A00D792DB /* ImagePicker.swift in Sources */,
 				4D93EA442562AC1E00323612 /* PangButtonView.swift in Sources */,
 				4D176D35256A91CE00495876 /* CardModifier.swift in Sources */,
-				4D93EA402562A57000323612 /* PangObject.swift in Sources */,
 				4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */,
 				4D82C2F42569DA840048E94A /* CardContentView.swift in Sources */,
 				4D93EA262562A09600323612 /* pangApp.swift in Sources */,

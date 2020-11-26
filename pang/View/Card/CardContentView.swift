@@ -39,7 +39,7 @@ struct CardContentView: View {
 struct CardContentView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CardContentView(pang: PangObject.example.pangs[4])
+            CardContentView(pang: Pangs.example.zonePangs[4])
         }
     }
 }

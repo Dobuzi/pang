@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SettingView: View {
-    @StateObject var pangInstance: PangObject
+    @Binding var pangs: Pangs
     var body: some View {
         ZStack {
             BackgroundView()
@@ -16,7 +16,7 @@ struct SettingView: View {
                 Text("Caches")
                 Spacer()
                 SystemImageButtonView(systemImage: "trash") {
-                    pangInstance.removeCache()
+                    pangs.removeCache()
                 }
             }
             .frame(width: 150, height: 100)
@@ -25,8 +25,9 @@ struct SettingView: View {
 }
 
 struct SettingView_Previews: PreviewProvider {
+    @State static var pangs = Pangs()
     static var previews: some View {
-        SettingView(pangInstance: PangObject())
+        SettingView(pangs: $pangs)
             .preferredColorScheme(.dark)
     }
 }

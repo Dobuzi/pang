@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var pangInstance: PangObject
+    @Binding var pangs: Pangs
     @State private var showingSheet = false
     var body: some View {
         NavigationView {
             ZStack {
                 BackgroundView()
-                PangListView(pangInstance: pangInstance)
+                PangListView(pangs: $pangs)
                     .navigationBarTitle("Pang!", displayMode: .large)
                     .navigationBarItems(trailing: AddButtonView(showingSheet: $showingSheet))
                     .sheet(isPresented: $showingSheet) {
-                        PangInputView(pangInstance: pangInstance)
+                        PangInputView(pangs: $pangs)
                     }
             }
         }
@@ -26,8 +26,9 @@ struct HomeView: View {
 }
 
 struct HomeView_Previews: PreviewProvider {
+    @State static var pangs = Pangs.example
     static var previews: some View {
-        HomeView(pangInstance: PangObject.example)
+        HomeView(pangs: $pangs)
             .preferredColorScheme(.dark)
     }
 }

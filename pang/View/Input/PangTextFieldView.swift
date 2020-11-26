@@ -9,7 +9,6 @@ import SwiftUI
 import Combine
 
 struct PangTextFieldView: View {
-    @StateObject var pangInstance: PangObject
     @Binding var pangText: String
     let placeHolder: String = "생각을 적어보세요!"
     let wordLimit: Int = 40
@@ -50,7 +49,7 @@ struct PangTextFieldView: View {
 struct PangTextFieldView_Previews: PreviewProvider {
     @State static var pangText: String = ""
     static var previews: some View {
-        return PangTextFieldView(pangInstance: PangObject(), pangText: $pangText)
+        return PangTextFieldView(pangText: $pangText)
             
     }
 }

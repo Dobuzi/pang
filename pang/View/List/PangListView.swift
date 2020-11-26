@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct PangListView: View {
-    @StateObject var pangInstance: PangObject
+    @Binding var pangs: Pangs
     
     var body: some View {
         ScrollView(showsIndicators: false) {
             LazyVStack {
                 Spacer()
-                ForEach(pangInstance.pangs.reversed()) { pang in
+                ForEach(pangs.zonePangs.reversed()) { pang in
                     CardView(pang: pang)
                 }
             }
@@ -23,8 +23,9 @@ struct PangListView: View {
 }
 
 struct PangListView_Previews: PreviewProvider {
+    @State static var pangs = Pangs.example
     static var previews: some View {
-        return PangListView(pangInstance: PangObject.example)
+        PangListView(pangs: $pangs)
             .preferredColorScheme(.dark)
     }
 }

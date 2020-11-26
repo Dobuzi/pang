@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PangButtonView: View {
     @Environment(\.presentationMode) var presentationMode
-    @StateObject var pangInstance: PangObject
+    @Binding var pangs: Pangs
     
     @Binding var pangText: String
     @Binding var inputImages: [UIImage]
@@ -28,7 +28,7 @@ struct PangButtonView: View {
     
     func uploadPang() {
         withAnimation(.spring()) {
-            pangInstance.add(Pang(text: pangText == "" ? nil : pangText, images: inputImages))
+            pangs.add(Pang(text: pangText == "" ? nil : pangText, images: inputImages))
             inputImages = []
             pangText = ""
             UIApplication.shared.endEditing()
@@ -38,10 +38,10 @@ struct PangButtonView: View {
 }
 
 struct PangButtonView_Previews: PreviewProvider {
-    @State static var inputType: String = "Text"
+    @State static var pangs = Pangs()
     @State static var pangText: String = ""
     @State static var inputImages: [UIImage] = []
     static var previews: some View {
-        PangButtonView(pangInstance: PangObject(), pangText: $pangText, inputImages: $inputImages)
+        PangButtonView(pangs: $pangs, pangText: $pangText, inputImages: $inputImages)
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PangInputView: View {
-    @StateObject var pangInstance: PangObject
+    @Binding var pangs: Pangs
     @State private var pangText: String = ""
     @State private var inputImages: [UIImage] = []
     
@@ -19,10 +19,10 @@ struct PangInputView: View {
                 HStack {
                     CancelButtonView()
                     Spacer()
-                    PangButtonView(pangInstance: pangInstance, pangText: $pangText, inputImages: $inputImages)
+                    PangButtonView(pangs: $pangs, pangText: $pangText, inputImages: $inputImages)
                         .disabled(pangText == "" && inputImages.count == 0)
                 }
-                PangTextFieldView(pangInstance: pangInstance, pangText: $pangText)
+                PangTextFieldView(pangText: $pangText)
                 PangImageInputView(inputImages: $inputImages)
                 Spacer()
                 HStack {
@@ -39,8 +39,9 @@ struct PangInputView: View {
 }
 
 struct PangInputView_Previews: PreviewProvider {
+    @State static var pangs = Pangs.example
     static var previews: some View {
-        PangInputView(pangInstance: PangObject())
+        PangInputView(pangs: $pangs)
             
     }
 }

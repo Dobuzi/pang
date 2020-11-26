@@ -43,7 +43,7 @@ struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         ScrollView {
             LazyVStack {
-                ForEach(PangObject.example.pangs) { pang in
+                ForEach(Pangs.example.zonePangs) { pang in
                     CardView(pang: pang)
                 }
             }

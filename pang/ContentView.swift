@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var pangInstance = PangObject()
+    @State var pangs = Pangs()
     
     var body: some View {
         TabView {
-            HomeView(pangInstance: pangInstance)
+            HomeView(pangs: $pangs)
                 .tabItem { Label("Home", systemImage: "house") }
-            SettingView(pangInstance: pangInstance)
+            SettingView(pangs: $pangs)
                 .tabItem { Label("Setting", systemImage: "gear") }
         }
         .tabViewStyle(DefaultTabViewStyle())
-        .environmentObject(pangInstance)
         .onAppear {
             UITabBar.appearance().barTintColor = UIColor(named: "Background")
         }
