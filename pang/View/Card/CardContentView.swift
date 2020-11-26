@@ -14,6 +14,7 @@ struct CardContentView: View {
             VStack(alignment: .leading) {
                 if let text = pang.text {
                     Text(text)
+                        .font(.headline)
                     Spacer()
                 }
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -25,7 +26,6 @@ struct CardContentView: View {
                                     .scaledToFit()
                                     .frame(height: 90)
                                     .cornerRadius(5)
-                                    .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 5))
                             }
                         }
                     }

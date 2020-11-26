@@ -19,7 +19,6 @@ struct PangImageInputView: View {
                         .scaledToFit()
                         .frame(height: 90 * 2)
                         .cornerRadius(5)
-                        .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 5))
                 }
             }
         }

@@ -10,10 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var pangInstance = PangObject()
     
-    init() {
-        UITabBar.appearance().barTintColor = UIColor(named: "BackgroundContent")
-    }
-    
     var body: some View {
         TabView {
             HomeView(pangInstance: pangInstance)
@@ -23,6 +19,9 @@ struct ContentView: View {
         }
         .tabViewStyle(DefaultTabViewStyle())
         .environmentObject(pangInstance)
+        .onAppear {
+            UITabBar.appearance().barTintColor = UIColor(named: "Background")
+        }
     }
 }
 

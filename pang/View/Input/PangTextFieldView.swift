@@ -11,23 +11,35 @@ import Combine
 struct PangTextFieldView: View {
     @StateObject var pangInstance: PangObject
     @Binding var pangText: String
+    let placeHolder: String = "생각을 적어보세요!"
     let wordLimit: Int = 40
     var isFull: Bool {
         pangText.count > wordLimit
     }
+    
     var body: some View {
         VStack(alignment: .trailing, spacing: 10) {
-            TextEditor(text: $pangText)
-                .autocapitalization(.none)
-                .keyboardType(.twitter)
-                .frame(height: 90)
-                .cornerRadius(5)
-                .onReceive(Just(self.pangText)) { input in
-                    if isFull {
-                        self.pangText.removeLast()
-                    }
+            ZStack {
+                if pangText.count == 0 {
+                    Text(placeHolder)
+                        .foregroundColor(.secondary)
                 }
                 
+                TextEditor(text: $pangText)
+                    .autocapitalization(.none)
+                    .keyboardType(.twitter)
+                    .frame(height: 90)
+                    .opacity(0.7)
+                    .onReceive(Just(self.pangText)) { input in
+                        if isFull {
+                            self.pangText.removeLast()
+                        }
+                    }
+                    .onAppear {
+                        UITextView.appearance().backgroundColor = UIColor(named: "Background")
+                    }
+            }
+            
             Text("\(pangText.count) / \(wordLimit)")
                 .foregroundColor(.secondary)
                 .font(.subheadline)

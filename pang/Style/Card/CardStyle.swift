@@ -13,7 +13,29 @@ struct CardBackgroundStyle<S: Shape>: View {
     
     var body: some View {
         shape
-            .fill(Color("BackgroundContent"))
+            .fill(Color("Background"))
+            .overlay(
+                Group {
+                    if isHighlighted {
+                        shape
+                            .stroke(Color("OverlayDark"), lineWidth: 4)
+                            .blur(radius: 4)
+                            .offset(x: 2, y: 2)
+                            .mask(shape.fill(LinearGradient(Color.black, Color.clear)))
+                    }
+                }
+            )
+            .overlay(
+                Group {
+                    if isHighlighted {
+                        shape
+                            .stroke(Color("OverlayLight"), lineWidth: 8)
+                            .blur(radius: 4)
+                            .offset(x: -2, y: -2)
+                            .mask(shape.fill(LinearGradient(Color.clear, Color.black)))
+                    }
+                }
+            )
             .shadow(color: Color("DarkShadow"), radius: 10, x: isHighlighted ? -5 : 10, y: isHighlighted ? -5 : 10)
             .shadow(color: Color("LightShadow"), radius: 10, x: isHighlighted ? 5 : -5, y: isHighlighted ? 5 : -5)
     }

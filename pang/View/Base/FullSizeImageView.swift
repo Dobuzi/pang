@@ -9,12 +9,24 @@ import SwiftUI
 
 struct FullSizeImageView: View {
     let uiImage: UIImage
+    
+    @GestureState private var scale: CGFloat = 1.0
+    
     var body: some View {
         ZStack {
             BackgroundView()
             Image(uiImage: uiImage)
                 .resizable()
                 .scaledToFit()
+                .scaleEffect(scale)
+                .gesture(
+                    MagnificationGesture()
+                        .updating($scale) { value, scale, trans in
+                            withAnimation {
+                                scale = value.magnitude
+                            }
+                        }
+                )
         }
     }
 }

@@ -78,6 +78,7 @@ class PangObject: ObservableObject {
         
         do {
             try FileManager.default.removeItem(at: fileName)
+            print("Delete data from bundle.")
         } catch {
             print("Can't delete data from bundle.")
         }
@@ -90,7 +91,10 @@ class PangObject: ObservableObject {
         example.add(Pang(text: "Example1", images: [UIImage(imageLiteralResourceName: "sample-v")]))
         example.add(Pang(text: "Example2", images: [UIImage(imageLiteralResourceName: "sample-s")]))
         example.add(Pang(images: [UIImage(imageLiteralResourceName: "sample-h")]))
-        example.add(Pang(text: "Example3", images: [UIImage(imageLiteralResourceName: "sample-s")]))
+        example.add(Pang(text: "Example4", images: [
+                            UIImage(imageLiteralResourceName: "sample-s"),
+                            UIImage(imageLiteralResourceName: "sample-h")
+        ]))
         return example
     }
 }

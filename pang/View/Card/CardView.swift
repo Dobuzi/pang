@@ -26,8 +26,9 @@ struct CardView: View {
         }
         .padding()
         .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 15))
-        .frame(height: pang.images.count > 0 ? (pang.text != nil ? 180 : 100) : 120)
-        .padding(5)
+        .frame(height: (pang.images.count > 0 && pang.text != nil) ? 160 : 120)
+        .padding(.vertical, 5)
+        .padding(.horizontal, 10)
     }
     
     func formatDate(_ date: Date) -> String {
