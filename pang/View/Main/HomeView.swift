@@ -6,21 +6,29 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct HomeView: View {
+    @StateObject var locationManager = LocationFetcher()
+    
     @Binding var pangs: Pangs
-    @State private var showingSheet = false
+    @State private var showingAddSheet: Bool = false
+    @State private var showingZoneSheet: Bool = false
+    
     var body: some View {
         NavigationView {
             ZStack {
                 BackgroundView()
                 PangListView(pangs: $pangs)
             }
-            .navigationBarTitle("pang!", displayMode: .large)
-            .navigationBarItems(trailing: AddButtonView(showingSheet: $showingSheet))
-            .sheet(isPresented: $showingSheet) {
-                PangInputView(pangs: $pangs)
-            }
+            .navigationBarTitle("pang!")
+            .navigationBarItems(
+                leading: MapButtonView(showingSheet: $showingZoneSheet),
+                trailing: AddButtonView(pangs: $pangs, showingSheet: $showingAddSheet))
+        }
+        .environmentObject(locationManager)
+        .onAppear {
+            locationManager.start()
         }
     }
 }

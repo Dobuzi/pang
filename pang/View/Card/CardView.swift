@@ -26,7 +26,7 @@ struct CardView: View {
         }
         .padding()
         .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 15))
-        .frame(height: (pang.images.count > 0 && pang.text != nil) ? 160 : 120)
+        .frame(height: (pang.images.count > 0 && pang.text != nil) ? 160 : 140)
         .padding(.vertical, 5)
         .padding(.horizontal, 10)
     }

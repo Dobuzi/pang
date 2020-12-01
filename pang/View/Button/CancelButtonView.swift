@@ -9,11 +9,17 @@ import SwiftUI
 
 struct CancelButtonView: View {
     @Environment(\.presentationMode) var presentationMode
+    let withText: Bool
     var body: some View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
         }, label: {
-            Label("Cancel", systemImage: "xmark.circle")
+            if withText {
+                Label("Cancel", systemImage: "xmark.circle")
+            } else {
+                Image(systemName: "xmark.circle")
+            }
+            
         })
         .foregroundColor(.red)
         .buttonStyle(CardButtonStyle(shape: Capsule()))
@@ -23,6 +29,6 @@ struct CancelButtonView: View {
 
 struct CancelButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        CancelButtonView()
+        CancelButtonView(withText: true)
     }
 }

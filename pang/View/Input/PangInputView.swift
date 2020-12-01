@@ -21,7 +21,7 @@ struct PangInputView: View {
             ZStack(alignment: .bottomTrailing) {
                 VStack(spacing: 20) {
                     HStack {
-                        CancelButtonView()
+                        CancelButtonView(withText: true)
                         Spacer()
                         PangButtonView(pangs: $pangs, pangText: $pangText, inputImages: $inputImages)
                             .disabled(pangText == "" && inputImages.count == 0)

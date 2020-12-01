@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4D176D35256A91CE00495876 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D176D34256A91CE00495876 /* CardModifier.swift */; };
 		4D270DEA25654EC300D78D19 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D270DE925654EC300D78D19 /* SettingView.swift */; };
+		4D29F90E2570AB8300747289 /* String-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29F90D2570AB8300747289 /* String-extension.swift */; };
+		4D29F9112570AE3200747289 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29F9102570AE3200747289 /* MapView.swift */; };
+		4D29F9142570B1BE00747289 /* MapKit-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29F9132570B1BE00747289 /* MapKit-extension.swift */; };
 		4D3551FC2564035800A6EF2B /* Light-Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */; };
 		4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FF25640B1700A6EF2B /* BackgroundView.swift */; };
 		4D7C6C9A2566A70C0041524F /* PangImageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C6C992566A70C0041524F /* PangImageInputView.swift */; };
@@ -31,6 +34,9 @@
 		4DA05AB4256F7090004E8859 /* Pangs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05AB3256F7090004E8859 /* Pangs.swift */; };
 		4DA05AB8256F780F004E8859 /* Publishers-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05AB7256F780F004E8859 /* Publishers-extension.swift */; };
 		4DA05ABB256F7937004E8859 /* Notification-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA05ABA256F7937004E8859 /* Notification-extension.swift */; };
+		4DA308D72574C3BF0068E629 /* MapButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA308D62574C3BF0068E629 /* MapButtonView.swift */; };
+		4DA308DE2574C7C90068E629 /* PangZoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA308DD2574C7C90068E629 /* PangZoneView.swift */; };
+		4DAB163D257525DD00B83E13 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAB163C257525DD00B83E13 /* Location.swift */; };
 		4DB00E15256E2585007B3DC4 /* FullSizeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */; };
 		4DB1A260256B881B00EC94A8 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */; };
 		4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */; };
@@ -52,6 +58,9 @@
 /* Begin PBXFileReference section */
 		4D176D34256A91CE00495876 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 		4D270DE925654EC300D78D19 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		4D29F90D2570AB8300747289 /* String-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-extension.swift"; sourceTree = "<group>"; };
+		4D29F9102570AE3200747289 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		4D29F9132570B1BE00747289 /* MapKit-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit-extension.swift"; sourceTree = "<group>"; };
 		4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Light-Neumorphism.swift"; sourceTree = "<group>"; };
 		4D3551FF25640B1700A6EF2B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		4D7C6C992566A70C0041524F /* PangImageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangImageInputView.swift; sourceTree = "<group>"; };
@@ -76,6 +85,9 @@
 		4DA05AB3256F7090004E8859 /* Pangs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pangs.swift; sourceTree = "<group>"; };
 		4DA05AB7256F780F004E8859 /* Publishers-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publishers-extension.swift"; sourceTree = "<group>"; };
 		4DA05ABA256F7937004E8859 /* Notification-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification-extension.swift"; sourceTree = "<group>"; };
+		4DA308D62574C3BF0068E629 /* MapButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapButtonView.swift; sourceTree = "<group>"; };
+		4DA308DD2574C7C90068E629 /* PangZoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangZoneView.swift; sourceTree = "<group>"; };
+		4DAB163C257525DD00B83E13 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSizeImageView.swift; sourceTree = "<group>"; };
 		4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
 		4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButtonView.swift; sourceTree = "<group>"; };
@@ -123,6 +135,7 @@
 				4DC168032564D29900D792DB /* BrandNameView.swift */,
 				4DC168062564DC9300D792DB /* SystemImageButtonView.swift */,
 				4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */,
+				4D29F9102570AE3200747289 /* MapView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -196,6 +209,7 @@
 				4DC168092564DF7E00D792DB /* List */,
 				4D93EA552562B71000323612 /* Card */,
 				4D93EA472562AE2300323612 /* Input */,
+				4DA308DC2574C7B00068E629 /* Zone */,
 				4D93EA422562AC0300323612 /* Button */,
 			);
 			path = View;
@@ -206,6 +220,7 @@
 			children = (
 				4D93EA3B2562A1CB00323612 /* Pang.swift */,
 				4DA05AB3256F7090004E8859 /* Pangs.swift */,
+				4DAB163C257525DD00B83E13 /* Location.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +233,7 @@
 				4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */,
 				4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */,
 				4DB1A265256B8FE300EC94A8 /* ImageButtonView.swift */,
+				4DA308D62574C3BF0068E629 /* MapButtonView.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -241,6 +257,8 @@
 				4DCC7362256623490091878A /* View-extension.swift */,
 				4DA05AB7256F780F004E8859 /* Publishers-extension.swift */,
 				4DA05ABA256F7937004E8859 /* Notification-extension.swift */,
+				4D29F90D2570AB8300747289 /* String-extension.swift */,
+				4D29F9132570B1BE00747289 /* MapKit-extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +280,14 @@
 				4D82C2F6256A10560048E94A /* Neumorphism */,
 			);
 			path = Style;
+			sourceTree = "<group>";
+		};
+		4DA308DC2574C7B00068E629 /* Zone */ = {
+			isa = PBXGroup;
+			children = (
+				4DA308DD2574C7C90068E629 /* PangZoneView.swift */,
+			);
+			path = Zone;
 			sourceTree = "<group>";
 		};
 		4DC168092564DF7E00D792DB /* List */ = {
@@ -363,6 +389,7 @@
 				4DB00E15256E2585007B3DC4 /* FullSizeImageView.swift in Sources */,
 				4D9A6D342563FCC2008DE863 /* Dark-Neumorphism.swift in Sources */,
 				4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */,
+				4D29F9112570AE3200747289 /* MapView.swift in Sources */,
 				4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */,
 				4D93EA4E2562B28200323612 /* UIApplication-extension.swift in Sources */,
 				4DA05ABB256F7937004E8859 /* Notification-extension.swift in Sources */,
@@ -375,16 +402,21 @@
 				4DB1A266256B8FE300EC94A8 /* ImageButtonView.swift in Sources */,
 				4D82C2F9256A10880048E94A /* CardStyle.swift in Sources */,
 				4DC168142564E7E700D792DB /* ImageSaver.swift in Sources */,
+				4D29F9142570B1BE00747289 /* MapKit-extension.swift in Sources */,
 				4DC168012564D25400D792DB /* LogoView.swift in Sources */,
 				4D93EA372562A11D00323612 /* HomeView.swift in Sources */,
+				4DA308DE2574C7C90068E629 /* PangZoneView.swift in Sources */,
 				4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */,
 				4DB1A260256B881B00EC94A8 /* AddButtonView.swift in Sources */,
 				4D93EA282562A09600323612 /* ContentView.swift in Sources */,
 				4DC168072564DC9300D792DB /* SystemImageButtonView.swift in Sources */,
 				4DCC736025661D0C0091878A /* PangTextFieldView.swift in Sources */,
+				4DAB163D257525DD00B83E13 /* Location.swift in Sources */,
+				4DA308D72574C3BF0068E629 /* MapButtonView.swift in Sources */,
 				4DC1680B2564DF9900D792DB /* PangListView.swift in Sources */,
 				4DC168112564E73A00D792DB /* ImagePicker.swift in Sources */,
 				4D93EA442562AC1E00323612 /* PangButtonView.swift in Sources */,
+				4D29F90E2570AB8300747289 /* String-extension.swift in Sources */,
 				4D176D35256A91CE00495876 /* CardModifier.swift in Sources */,
 				4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */,
 				4D82C2F42569DA840048E94A /* CardContentView.swift in Sources */,
