@@ -9,8 +9,10 @@ import SwiftUI
 
 struct PangButtonView: View {
     @Environment(\.presentationMode) var presentationMode
-    @Binding var pangs: Pangs
     
+    @EnvironmentObject var locationManager: LocationFetcher
+    
+    @Binding var pangs: Pangs
     @Binding var pangText: String
     @Binding var inputImages: [UIImage]
     
@@ -27,8 +29,12 @@ struct PangButtonView: View {
     }
     
     func uploadPang() {
+        var newPang = Pang(text: pangText == "" ? nil : pangText, images: inputImages)
+        if let currentLocation = locationManager.lastKnownLocation {
+            newPang.location = Location(coordinate: currentLocation)
+        }
         withAnimation(.spring()) {
-            pangs.add(Pang(text: pangText == "" ? nil : pangText, images: inputImages))
+            pangs.add(newPang)
             inputImages = []
             pangText = ""
             UIApplication.shared.endEditing()

@@ -43,6 +43,7 @@ struct PangZoneView: View {
             return
         }
         region.center = currentLocation
+        region.span = .init(latitudeDelta: 0.05, longitudeDelta: 0.05)
     }
 }
 

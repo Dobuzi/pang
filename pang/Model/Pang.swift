@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Foundation
+import MapKit
 
 struct Pang: Identifiable, Codable {
     var id = UUID()
@@ -14,18 +15,18 @@ struct Pang: Identifiable, Codable {
     var images: [UIImage]
     var currentDate = Date()
     var expirationDate: Date {
-        currentDate + 10
+        currentDate.addingTimeInterval(10)
     }
+    var location: Location?
     
     enum CodingKeys: CodingKey {
-        case text, images
+        case text, images, location
     }
     
-    init(text: String? = nil, images: [UIImage] = []) {
-        if let text = text {
-            self.text = text
-        }
+    init(text: String? = nil, images: [UIImage] = [], location: Location? = nil) {
+        self.text = text
         self.images = images
+        self.location = location
     }
     
     init(from decoder: Decoder) throws {
@@ -35,17 +36,27 @@ struct Pang: Identifiable, Codable {
         self.text = text
         
         let data = try container.decode([Data].self, forKey: CodingKeys.images)
-        
         self.images = data.compactMap { UIImage(data: $0) }
+        
+        let location = try container.decode(Location.self, forKey: CodingKeys.location)
+        self.location = location
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
+        
+//        text encoding
         if let text = self.text {
-            try container.encode(text, forKey: .text)
-            print("\(text) encoded")
+            do {
+                try container.encode(text, forKey: .text)
+                print("\(text) encoded.")
+            } catch {
+                print("text encoding is failed.")
+            }
+            
         }
         
+//        image encoding
         var encodedImages: [Data] = []
         for image in images {
             if let encodedImage = image.jpegData(compressionQuality: 0.2) {
@@ -60,5 +71,14 @@ struct Pang: Identifiable, Codable {
             print("image encoding is failed.")
         }
         
+//        location encoding
+        if let location = self.location {
+            do {
+                try container.encode(location, forKey: .location)
+                print("location is encoded.")
+            } catch {
+                print("location encoding  is failed.")
+            }
+        }
     }
 }

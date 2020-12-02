@@ -75,16 +75,28 @@ struct Pangs {
         self.zonePangs.removeAll()
     }
     
+    #if DEBUG
     static var example: Pangs {
-            var example = Pangs()
-            example.add(Pang(text: "Example0"))
-            example.add(Pang(text: "Example1", images: [UIImage(imageLiteralResourceName: "sample-v")]))
-            example.add(Pang(text: "Example2", images: [UIImage(imageLiteralResourceName: "sample-s")]))
-            example.add(Pang(images: [UIImage(imageLiteralResourceName: "sample-h")]))
-            example.add(Pang(text: "Example4", images: [
-                                UIImage(imageLiteralResourceName: "sample-s"),
-                                UIImage(imageLiteralResourceName: "sample-h")
-            ]))
-            return example
-        }
+        let locations: [Location] = [
+            Location(coordinate: .init(latitude: 100, longitude: 30)),
+            Location(coordinate: .init(latitude: 80, longitude: 20)),
+            Location(coordinate: .init(latitude: 30, longitude: 10))
+        ]
+        
+        let images: [UIImage] = [
+            UIImage(imageLiteralResourceName: "sample-s"),
+            UIImage(imageLiteralResourceName: "sample-v"),
+            UIImage(imageLiteralResourceName: "sample-h")
+        ]
+        
+        var example = Pangs()
+        
+        example.add(Pang(text: "Example0", location: locations[0]))
+        example.add(Pang(text: "Example1", images: [images[1]], location: locations[2]))
+        example.add(Pang(text: "Example2", images: [images[0]]))
+        example.add(Pang(images: [images[2]], location: locations[1]))
+        example.add(Pang(text: "Example4", images: images, location: locations[0]))
+        return example
+    }
+    #endif
 }

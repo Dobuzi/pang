@@ -8,9 +8,30 @@
 import Foundation
 import CoreLocation
 
-struct Location: Identifiable {
+struct Location: Identifiable, Codable {
     let id = UUID()
     var coordinate: CLLocationCoordinate2D
+    
+    enum CodingKeys: CodingKey {
+        case coordinate
+    }
+    
+    init(coordinate: CLLocationCoordinate2D) {
+        self.coordinate = coordinate
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        let coordinate = try container.decode(CLLocationCoordinate2D.self, forKey: .coordinate)
+        self.coordinate = coordinate
+    }
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        
+        try container.encode(coordinate, forKey: .coordinate)
+    }
 }
 
 class LocationFetcher: NSObject, CLLocationManagerDelegate, ObservableObject {

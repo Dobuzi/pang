@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct CardView: View {
     let pang: Pang
     var formattedDate: String {
         self.formatDate(pang.currentDate)
+    }
+    var formattedLocation: String {
+        self.formatLocation(pang.location) ?? ""
     }
     
     @State var showingCard: Bool = true
@@ -23,6 +27,9 @@ struct CardView: View {
                     VStack(alignment: .trailing) {
                         AuthorImageView()
                         Spacer()
+                        Text(formattedLocation)
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
                         Text(formattedDate)
                             .font(.caption2)
                             .foregroundColor(.secondary)
@@ -51,6 +58,13 @@ struct CardView: View {
         formatter.dateStyle = .none
         formatter.timeStyle = .short
         return formatter.string(from: date)
+    }
+    
+    func formatLocation(_ location: Location?) -> String? {
+        guard let location = location else { return nil }
+        let latitude = location.coordinate.latitude
+        let longitude = location.coordinate.longitude
+        return "위치: \(latitude), \(longitude)"
     }
 }
 
