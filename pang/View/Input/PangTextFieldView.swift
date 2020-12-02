@@ -21,13 +21,14 @@ struct PangTextFieldView: View {
             ZStack {
                 if pangText.count == 0 {
                     Text(placeHolder)
+                        .font(.subheadline)
                         .foregroundColor(.secondary)
                 }
                 
                 TextEditor(text: $pangText)
                     .autocapitalization(.none)
                     .keyboardType(.twitter)
-                    .font(.headline)
+                    .font(.subheadline)
                     .frame(height: 30)
                     .opacity(0.7)
                     .onReceive(Just(self.pangText)) { input in

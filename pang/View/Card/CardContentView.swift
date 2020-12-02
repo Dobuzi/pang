@@ -14,7 +14,7 @@ struct CardContentView: View {
             VStack(alignment: .leading) {
                 if let text = pang.text {
                     Text(text)
-                        .font(.headline)
+                        .font(.subheadline)
                     Spacer()
                 }
                 ScrollView(.horizontal, showsIndicators: false) {

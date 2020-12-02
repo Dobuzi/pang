@@ -13,22 +13,37 @@ struct CardView: View {
         self.formatDate(pang.currentDate)
     }
     
+    @State var showingCard: Bool = true
+    
     var body: some View {
-        HStack(alignment: .top) {
-            CardContentView(pang: pang)
-            VStack(alignment: .trailing) {
-                AuthorImageView()
-                Spacer()
-                Text(formattedDate)
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
+        Group {
+            if showingCard {
+                HStack(alignment: .top) {
+                    CardContentView(pang: pang)
+                    VStack(alignment: .trailing) {
+                        AuthorImageView()
+                        Spacer()
+                        Text(formattedDate)
+                            .font(.caption2)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .padding()
+                .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 15))
+                .frame(height: (pang.images.count > 0 && pang.text != nil) ? 160 : 140)
+                .padding(.vertical, 5)
+                .padding(.horizontal, 10)
+            } else {
+                EmptyView()
             }
         }
-        .padding()
-        .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 15))
-        .frame(height: (pang.images.count > 0 && pang.text != nil) ? 160 : 140)
-        .padding(.vertical, 5)
-        .padding(.horizontal, 10)
+        .onAppear(perform: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
+                withAnimation(.easeInOut(duration: 1)) {
+                    self.showingCard = false
+                }
+            }
+        })
     }
     
     func formatDate(_ date: Date) -> String {
