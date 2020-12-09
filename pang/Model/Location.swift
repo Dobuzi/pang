@@ -11,12 +11,20 @@ import CoreLocation
 struct Location: Identifiable, Codable {
     let id = UUID()
     var coordinate: CLLocationCoordinate2D
+    var placemark: String = "???"
+    
+    private let geocoder = CLGeocoder()
     
     enum CodingKeys: CodingKey {
         case coordinate
     }
     
-    init(coordinate: CLLocationCoordinate2D) {
+    init(coordinate: CLLocationCoordinate2D? = nil) {
+        guard let coordinate = coordinate else {
+            let manager = CLLocationManager()
+            self.coordinate = manager.location?.coordinate ?? Self.SeoulCoordinate
+            return
+        }
         self.coordinate = coordinate
     }
     
@@ -32,24 +40,6 @@ struct Location: Identifiable, Codable {
         
         try container.encode(coordinate, forKey: .coordinate)
     }
-}
-
-class LocationFetcher: NSObject, CLLocationManagerDelegate, ObservableObject {
-    let manager = CLLocationManager()
-    @Published var lastKnownLocation: CLLocationCoordinate2D?
     
-    override init() {
-        super.init()
-        manager.delegate = self
-    }
-    
-    func start() {
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        objectWillChange.send()
-        lastKnownLocation = locations.first?.coordinate
-    }
+    static var SeoulCoordinate: CLLocationCoordinate2D = .init(latitude: 37.5665, longitude: 126.9780)
 }

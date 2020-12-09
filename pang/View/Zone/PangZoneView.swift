@@ -10,27 +10,40 @@ import MapKit
 
 struct PangZoneView: View {
     @State private var userTrackingMode: MapUserTrackingMode = .follow
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-    
-    @EnvironmentObject var locationManager: LocationFetcher
+    @State private var region = MKCoordinateRegion(
+        center: .init(latitude: 37.5665, longitude: 126.9780),
+        span: .init(latitudeDelta: 0.02, longitudeDelta: 0.02))
+    @Binding var locationManager: CLLocationManager
+    private var placemark: String {
+        var placemark: CLPlacemark? = nil
+        let geocoder = CLGeocoder()
+        guard let location = locationManager.location else { return "???" }
+        geocoder.reverseGeocodeLocation(location) { (places, error) in
+            guard error == nil else { return }
+            guard let places = places else { return }
+            placemark = places[0]
+        }
+        guard placemark != nil else { return "???" }
+        return String(describing: placemark)
+    }
     
     var body: some View {
         ZStack {
-            MapView(userTrackingMode: $userTrackingMode, region: $region)
-            VStack(alignment: .trailing) {
+            BackgroundView()
+            VStack {
+                MapView(userTrackingMode: $userTrackingMode, region: $region, locationManager: $locationManager)
+                    .cardBackgroundStyle(isHighlighted: false, shape: Rectangle())
                 HStack {
-                    Spacer()
                     CancelButtonView(withText: false)
-                }
-                Spacer()
-                HStack {
+                    Spacer()
+                    Text(placemark)
                     Spacer()
                     SystemImageButtonView(systemImage: "location.fill", content: getLocation)
                         .foregroundColor(.blue)
                 }
-                .padding(.bottom, 50)
+                .frame(height: 80)
+                .padding()
             }
-            .padding()
         }
         .onAppear {
             getLocation()
@@ -38,17 +51,17 @@ struct PangZoneView: View {
     }
     
     func getLocation() {
-        guard let currentLocation = locationManager.lastKnownLocation else {
+        guard let currentLocation = locationManager.location else {
             print("no current location.")
             return
         }
-        region.center = currentLocation
-        region.span = .init(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        region.center = currentLocation.coordinate
     }
 }
 
 struct PangZoneView_Previews: PreviewProvider {
+    @State static var locationManager = CLLocationManager()
     static var previews: some View {
-        PangZoneView()
+        PangZoneView(locationManager: $locationManager)
     }
 }

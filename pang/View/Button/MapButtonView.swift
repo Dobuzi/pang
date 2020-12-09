@@ -10,6 +10,7 @@ import MapKit
 
 struct MapButtonView: View {
     @Binding var showingSheet: Bool
+    @Binding var locationManager: CLLocationManager
     
     var body: some View {
         Button(action: {
@@ -19,13 +20,14 @@ struct MapButtonView: View {
         }
         .foregroundColor(.offPurple)
         .sheet(isPresented: $showingSheet) {
-            PangZoneView()
+            PangZoneView(locationManager: $locationManager)
         }
     }
 }
 
 struct MapButtonView_Previews: PreviewProvider {
+    @State static var locationManager = CLLocationManager()
     static var previews: some View {
-        MapButtonView(showingSheet: .constant(false))
+        MapButtonView(showingSheet: .constant(false), locationManager: $locationManager)
     }
 }

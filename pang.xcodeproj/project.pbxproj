@@ -53,6 +53,8 @@
 		4DE694FC256386E600FBCE31 /* Color-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE694FB256386E600FBCE31 /* Color-extension.swift */; };
 		4DE6950025638F2A00FBCE31 /* Gradient-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */; };
 		4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE695062563932500FBCE31 /* AuthorImageView.swift */; };
+		65B340D190BC4F5DB6A5A30E /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E72391C71A2441998DB276E /* amplifyconfiguration.json */; };
+		9013A1B4EB624D9CA498AADA /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = EA98648EF52A41C39931D130 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,9 @@
 		4DE694FB256386E600FBCE31 /* Color-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-extension.swift"; sourceTree = "<group>"; };
 		4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient-extension.swift"; sourceTree = "<group>"; };
 		4DE695062563932500FBCE31 /* AuthorImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorImageView.swift; sourceTree = "<group>"; };
+		7F86A54FD9D34C5EA41565DC /* amplifytools.xcconfig */ = {isa = PBXFileReference; name = "amplifytools.xcconfig"; path = "amplifytools.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.xcconfig; explicitFileType = undefined; includeInIndex = 0; };
+		0E72391C71A2441998DB276E /* amplifyconfiguration.json */ = {isa = PBXFileReference; name = "amplifyconfiguration.json"; path = "amplifyconfiguration.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EA98648EF52A41C39931D130 /* awsconfiguration.json */ = {isa = PBXFileReference; name = "awsconfiguration.json"; path = "awsconfiguration.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +167,7 @@
 		4D93EA192562A09600323612 = {
 			isa = PBXGroup;
 			children = (
+				90E633985F14444D869A2167 /* AmplifyConfig */,
 				4D93EA242562A09600323612 /* pang */,
 				4D93EA232562A09600323612 /* Products */,
 			);
@@ -315,6 +321,25 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		90E633985F14444D869A2167 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				7F86A54FD9D34C5EA41565DC /* amplifytools.xcconfig */,
+				0E72391C71A2441998DB276E /* amplifyconfiguration.json */,
+				EA98648EF52A41C39931D130 /* awsconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			path = .;
+			sourceTree = "<group>";
+		};
+		BB810435D8354DB783CA1186 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			path = undefined;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -375,6 +400,8 @@
 				4D93EA522562B35500323612 /* README.md in Resources */,
 				4D93EA2D2562A09700323612 /* Preview Assets.xcassets in Resources */,
 				4D93EA2A2562A09700323612 /* Assets.xcassets in Resources */,
+				65B340D190BC4F5DB6A5A30E /* amplifyconfiguration.json in Resources */,
+				9013A1B4EB624D9CA498AADA /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

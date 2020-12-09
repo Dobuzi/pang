@@ -11,7 +11,7 @@ struct CardContentView: View {
     let pang: Pang
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 0) {
                 if let text = pang.text {
                     Text(text)
                         .font(.subheadline)
@@ -26,7 +26,7 @@ struct CardContentView: View {
                                     .scaledToFit()
                                     .cornerRadius(5)
                             }
-                            .frame(height: 100)
+                            .frame(height: 80)
                         }
                     }
                 }

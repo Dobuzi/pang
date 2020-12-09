@@ -9,8 +9,7 @@ import SwiftUI
 import MapKit
 
 struct HomeView: View {
-    @StateObject var locationManager = LocationFetcher()
-    
+    @State private var locationManager = CLLocationManager()
     @Binding var pangs: Pangs
     @State private var showingAddSheet: Bool = false
     @State private var showingZoneSheet: Bool = false
@@ -23,13 +22,17 @@ struct HomeView: View {
             }
             .navigationBarTitle("pang!")
             .navigationBarItems(
-                leading: MapButtonView(showingSheet: $showingZoneSheet),
-                trailing: AddButtonView(pangs: $pangs, showingSheet: $showingAddSheet))
+                leading: MapButtonView(showingSheet: $showingZoneSheet, locationManager: $locationManager),
+                trailing: AddButtonView(pangs: $pangs, showingSheet: $showingAddSheet, locationManager: $locationManager))
         }
-        .environmentObject(locationManager)
         .onAppear {
-            locationManager.start()
+            self.initLocationSetting()
         }
+    }
+    
+    func initLocationSetting() {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
 }
 

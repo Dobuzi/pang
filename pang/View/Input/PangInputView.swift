@@ -7,12 +7,14 @@
 
 import SwiftUI
 import Combine
+import CoreLocation
 
 struct PangInputView: View {
     @Binding var pangs: Pangs
+    @Binding var locationManager: CLLocationManager
+    
     @State private var pangText: String = ""
     @State private var inputImages: [UIImage] = []
-    
     @State private var keyboardHeight: CGFloat = 0
     
     var body: some View {
@@ -21,9 +23,9 @@ struct PangInputView: View {
             ZStack(alignment: .bottomTrailing) {
                 VStack(spacing: 20) {
                     HStack {
-                        CancelButtonView(withText: true)
+                        CancelButtonView(withText: false)
                         Spacer()
-                        PangButtonView(pangs: $pangs, pangText: $pangText, inputImages: $inputImages)
+                        PangButtonView(pangs: $pangs, pangText: $pangText, inputImages: $inputImages, locationManager: $locationManager)
                             .disabled(pangText == "" && inputImages.count == 0)
                     }
                     PangTextFieldView(pangText: $pangText)
@@ -42,8 +44,10 @@ struct PangInputView: View {
 
 struct PangInputView_Previews: PreviewProvider {
     @State static var pangs = Pangs.example
+    @State static var location = Location()
+    @State static var locationManager = CLLocationManager()
     static var previews: some View {
-        PangInputView(pangs: $pangs)
+        PangInputView(pangs: $pangs, locationManager: $locationManager)
             
     }
 }
