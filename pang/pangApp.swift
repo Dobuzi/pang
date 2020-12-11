@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct pangApp: App {
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

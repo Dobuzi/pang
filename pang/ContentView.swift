@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var pangs = Pangs()
+    @State private var logInSuccess = false
+    @State private var pangs = Pangs()
     
     var body: some View {
-        TabView {
-            HomeView(pangs: $pangs)
-                .tabItem { Label("Home", systemImage: "house") }
-            SettingView(pangs: $pangs)
-                .tabItem { Label("Setting", systemImage: "gear") }
+        Group {
+            if logInSuccess {
+                TabView {
+                    HomeView(pangs: $pangs)
+                        .tabItem { Label("Home", systemImage: "house") }
+                    SettingView(pangs: $pangs)
+                        .tabItem { Label("Setting", systemImage: "gear") }
+                }
+                .onAppear {
+                    UITabBar.appearance().barTintColor = UIColor(Color("Background"))
+                    UITabBar.appearance().tintColor = UIColor(.offPurple)
+                }
+            } else {
+                LogInView(logInSuccess: $logInSuccess)
+            }
+            
         }
-        .onAppear {
-            UITabBar.appearance().barTintColor = UIColor(Color("Background"))
-            UITabBar.appearance().tintColor = UIColor(.offPurple)
-        }
+        
     }
 }
 
