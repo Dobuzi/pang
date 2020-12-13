@@ -37,8 +37,8 @@ struct PangButtonView: View {
             pangs.add(newPang)
             inputImages = []
             pangText = ""
-            UIApplication.shared.endEditing()
         }
+        self.hideKeyboard()
         self.presentationMode.wrappedValue.dismiss()
     }
 }

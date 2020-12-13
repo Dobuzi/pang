@@ -37,7 +37,7 @@ struct PangInputView: View {
             .padding()
         }
         .onTapGesture {
-            UIApplication.shared.endEditing()
+            self.hideKeyboard()
         }
     }
 }

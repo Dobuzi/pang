@@ -53,7 +53,6 @@ struct CardButtonStyle<S: Shape>: ButtonStyle {
 }
 
 struct CardToggleStyle<S: Shape>: ToggleStyle {
-    let isLightMode: Bool
     let shape: S
     
     func makeBody(configuration: Configuration) -> some View {
@@ -61,7 +60,7 @@ struct CardToggleStyle<S: Shape>: ToggleStyle {
             configuration.isOn.toggle()
         }) {
             configuration.label
-                .padding()
+                .padding(5)
                 .contentShape(shape)
         }
         .background(CardBackgroundStyle(isHighlighted: configuration.isOn, shape: shape))

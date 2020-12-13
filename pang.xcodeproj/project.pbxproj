@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0FE0D42585D3B5000169A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D0FE0D32585D3B5000169A6 /* GoogleService-Info.plist */; };
 		4D176D35256A91CE00495876 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D176D34256A91CE00495876 /* CardModifier.swift */; };
-		4D1C3DBB258100E6006E1AF8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D1C3DBA258100E6006E1AF8 /* GoogleService-Info.plist */; };
 		4D1C3DD825810209006E1AF8 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3DD725810209006E1AF8 /* LogInView.swift */; };
 		4D1C3DDB2581069C006E1AF8 /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3DDA2581069C006E1AF8 /* CreateUserView.swift */; };
 		4D270DEA25654EC300D78D19 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D270DE925654EC300D78D19 /* SettingView.swift */; };
@@ -17,6 +17,7 @@
 		4D29F9142570B1BE00747289 /* MapKit-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29F9132570B1BE00747289 /* MapKit-extension.swift */; };
 		4D3551FC2564035800A6EF2B /* Light-Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */; };
 		4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FF25640B1700A6EF2B /* BackgroundView.swift */; };
+		4D5A9CAA25848AB00007C839 /* InfoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A9CA925848AB00007C839 /* InfoButtonView.swift */; };
 		4D7C6C9A2566A70C0041524F /* PangImageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C6C992566A70C0041524F /* PangImageInputView.swift */; };
 		4D7C6C9D2566B0E10041524F /* InputTypePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C6C9C2566B0E10041524F /* InputTypePickerView.swift */; };
 		4D82C2F42569DA840048E94A /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82C2F32569DA840048E94A /* CardContentView.swift */; };
@@ -29,7 +30,6 @@
 		4D93EA3C2562A1CB00323612 /* Pang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA3B2562A1CB00323612 /* Pang.swift */; };
 		4D93EA442562AC1E00323612 /* PangButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA432562AC1E00323612 /* PangButtonView.swift */; };
 		4D93EA492562AE3400323612 /* PangInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA482562AE3400323612 /* PangInputView.swift */; };
-		4D93EA4E2562B28200323612 /* UIApplication-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA4D2562B28200323612 /* UIApplication-extension.swift */; };
 		4D93EA522562B35500323612 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4D93EA512562B35500323612 /* README.md */; };
 		4D93EA572562B72400323612 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D93EA562562B72400323612 /* CardView.swift */; };
 		4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9A6D2F2563F832008DE863 /* Neumorphism.swift */; };
@@ -53,6 +53,7 @@
 		4DC168142564E7E700D792DB /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168132564E7E700D792DB /* ImageSaver.swift */; };
 		4DCC736025661D0C0091878A /* PangTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCC735F25661D0C0091878A /* PangTextFieldView.swift */; };
 		4DCC7363256623490091878A /* View-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCC7362256623490091878A /* View-extension.swift */; };
+		4DD9A3C8258510F500D801ED /* GoogleLogInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD9A3C7258510F500D801ED /* GoogleLogInButtonView.swift */; };
 		4DE694FC256386E600FBCE31 /* Color-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE694FB256386E600FBCE31 /* Color-extension.swift */; };
 		4DE6950025638F2A00FBCE31 /* Gradient-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */; };
 		4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE695062563932500FBCE31 /* AuthorImageView.swift */; };
@@ -60,8 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0FE0D32585D3B5000169A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D176D34256A91CE00495876 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
-		4D1C3DBA258100E6006E1AF8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D1C3DD725810209006E1AF8 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		4D1C3DDA2581069C006E1AF8 /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
 		4D270DE925654EC300D78D19 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		4D29F9132570B1BE00747289 /* MapKit-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit-extension.swift"; sourceTree = "<group>"; };
 		4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Light-Neumorphism.swift"; sourceTree = "<group>"; };
 		4D3551FF25640B1700A6EF2B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		4D5A9CA925848AB00007C839 /* InfoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButtonView.swift; sourceTree = "<group>"; };
 		4D7C6C992566A70C0041524F /* PangImageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangImageInputView.swift; sourceTree = "<group>"; };
 		4D7C6C9C2566B0E10041524F /* InputTypePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTypePickerView.swift; sourceTree = "<group>"; };
 		4D82C2F32569DA840048E94A /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
@@ -84,7 +86,6 @@
 		4D93EA3B2562A1CB00323612 /* Pang.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pang.swift; sourceTree = "<group>"; };
 		4D93EA432562AC1E00323612 /* PangButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangButtonView.swift; sourceTree = "<group>"; };
 		4D93EA482562AE3400323612 /* PangInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangInputView.swift; sourceTree = "<group>"; };
-		4D93EA4D2562B28200323612 /* UIApplication-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication-extension.swift"; sourceTree = "<group>"; };
 		4D93EA512562B35500323612 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4D93EA562562B72400323612 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		4D9A6D2F2563F832008DE863 /* Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Neumorphism.swift; sourceTree = "<group>"; };
@@ -108,6 +109,7 @@
 		4DC168132564E7E700D792DB /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		4DCC735F25661D0C0091878A /* PangTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangTextFieldView.swift; sourceTree = "<group>"; };
 		4DCC7362256623490091878A /* View-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-extension.swift"; sourceTree = "<group>"; };
+		4DD9A3C7258510F500D801ED /* GoogleLogInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLogInButtonView.swift; sourceTree = "<group>"; };
 		4DE694FB256386E600FBCE31 /* Color-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-extension.swift"; sourceTree = "<group>"; };
 		4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient-extension.swift"; sourceTree = "<group>"; };
 		4DE695062563932500FBCE31 /* AuthorImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorImageView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,23 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		4D5A9CA725848A860007C839 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				4DD9A3C6258510E400D801ED /* LogIn */,
+				4D5A9CA825848A960007C839 /* CreateUser */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		4D5A9CA825848A960007C839 /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				4D5A9CA925848AB00007C839 /* InfoButtonView.swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
 		4D82C2F6256A10560048E94A /* Neumorphism */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				4D93EA2E2562A09700323612 /* Info.plist */,
-				4D1C3DBA258100E6006E1AF8 /* GoogleService-Info.plist */,
+				4D0FE0D32585D3B5000169A6 /* GoogleService-Info.plist */,
 				4D93EA252562A09600323612 /* pangApp.swift */,
 				4D93EA292562A09700323612 /* Assets.xcassets */,
 				4D93EA272562A09600323612 /* ContentView.swift */,
@@ -220,6 +239,7 @@
 		4D93EA352562A10900323612 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4D5A9CA725848A860007C839 /* User */,
 				4D270DE825654EAB00D78D19 /* Main */,
 				4D3551FE25640B0600A6EF2B /* Base */,
 				4DC168092564DF7E00D792DB /* List */,
@@ -267,7 +287,6 @@
 		4D93EA4C2562B26E00323612 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4D93EA4D2562B28200323612 /* UIApplication-extension.swift */,
 				4DE694FB256386E600FBCE31 /* Color-extension.swift */,
 				4DE694FF25638F2A00FBCE31 /* Gradient-extension.swift */,
 				4DCC7362256623490091878A /* View-extension.swift */,
@@ -331,6 +350,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		4DD9A3C6258510E400D801ED /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				4DD9A3C7258510F500D801ED /* GoogleLogInButtonView.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
 		586E339006FCAD4E41047012 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +387,7 @@
 				4D93EA1F2562A09600323612 /* Frameworks */,
 				4D93EA202562A09600323612 /* Resources */,
 				FA17F1A2CC2F081CD269236A /* [CP] Embed Pods Frameworks */,
+				93D31ADA768B166D97E77501 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -408,7 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D93EA522562B35500323612 /* README.md in Resources */,
-				4D1C3DBB258100E6006E1AF8 /* GoogleService-Info.plist in Resources */,
+				4D0FE0D42585D3B5000169A6 /* GoogleService-Info.plist in Resources */,
 				4D93EA2D2562A09700323612 /* Preview Assets.xcassets in Resources */,
 				4D93EA2A2562A09700323612 /* Assets.xcassets in Resources */,
 			);
@@ -437,6 +465,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93D31ADA768B166D97E77501 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pang/Pods-pang-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-pang/Pods-pang-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pang/Pods-pang-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA17F1A2CC2F081CD269236A /* [CP] Embed Pods Frameworks */ = {
@@ -469,7 +514,6 @@
 				4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */,
 				4D29F9112570AE3200747289 /* MapView.swift in Sources */,
 				4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */,
-				4D93EA4E2562B28200323612 /* UIApplication-extension.swift in Sources */,
 				4DA05ABB256F7937004E8859 /* Notification-extension.swift in Sources */,
 				4D93EA572562B72400323612 /* CardView.swift in Sources */,
 				4DA05AB4256F7090004E8859 /* Pangs.swift in Sources */,
@@ -488,6 +532,7 @@
 				4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */,
 				4DB1A260256B881B00EC94A8 /* AddButtonView.swift in Sources */,
 				4D93EA282562A09600323612 /* ContentView.swift in Sources */,
+				4D5A9CAA25848AB00007C839 /* InfoButtonView.swift in Sources */,
 				4DC168072564DC9300D792DB /* SystemImageButtonView.swift in Sources */,
 				4DCC736025661D0C0091878A /* PangTextFieldView.swift in Sources */,
 				4DAB163D257525DD00B83E13 /* Location.swift in Sources */,
@@ -495,6 +540,7 @@
 				4DC1680B2564DF9900D792DB /* PangListView.swift in Sources */,
 				4DC168112564E73A00D792DB /* ImagePicker.swift in Sources */,
 				4D1C3DD825810209006E1AF8 /* LogInView.swift in Sources */,
+				4DD9A3C8258510F500D801ED /* GoogleLogInButtonView.swift in Sources */,
 				4D93EA442562AC1E00323612 /* PangButtonView.swift in Sources */,
 				4D29F90E2570AB8300747289 /* String-extension.swift in Sources */,
 				4D176D35256A91CE00495876 /* CardModifier.swift in Sources */,
@@ -565,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -620,7 +666,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
