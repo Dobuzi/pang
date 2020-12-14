@@ -11,6 +11,8 @@ import FirebaseAuth
 struct CreateUserView: View {
     @Environment(\.presentationMode) var presentationMode
     
+    @EnvironmentObject var info: AppDelegate
+    
     @State private var newEmail: String = ""
     @State private var newPassword1: String = ""
     @State private var newPassword2: String = ""
@@ -46,6 +48,7 @@ struct CreateUserView: View {
                         SecureField("비밀번호", text: $newPassword1)
                             .textContentType(.newPassword)
                             .autocapitalization(.none)
+                            .keyboardType(.default)
                         Image(systemName: password1IsValid ? "checkmark" : "xmark")
                             .foregroundColor(password1IsValid ? .green : .red)
                     }
@@ -54,6 +57,7 @@ struct CreateUserView: View {
                         SecureField("비밀번호 확인", text: $newPassword2)
                             .textContentType(.newPassword)
                             .autocapitalization(.none)
+                            .keyboardType(.default)
                         Image(systemName: password2IsValid ? "checkmark" : "xmark")
                             .foregroundColor(password2IsValid ? .green : .red)
                     }
@@ -84,6 +88,9 @@ struct CreateUserView: View {
                 Section {
                     InfoButtonView(showingInfo: $showingSecureInfo, labelTitle: infoTitle, title: infoTitle, message: infoMessage)
                 }
+            }
+            if info.onProcess {
+                LoadingView(text: "Signing In...")
             }
         }
         .navigationBarItems(trailing: Button(action: createUser) { Text("회원 가입") }
@@ -159,6 +166,7 @@ struct CreateUserView: View {
     }
     
     func createUser() {
+        info.onProcess = true
         Auth.auth().createUser(withEmail: newEmail, password: newPassword1) { authResult, error in
             if let error = error {
                 print("\(error.localizedDescription)")
@@ -183,6 +191,7 @@ struct CreateUserView: View {
                 }
             }
         }
+        info.onProcess = false
     }
 }
 

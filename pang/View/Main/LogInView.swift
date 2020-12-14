@@ -9,20 +9,20 @@ import SwiftUI
 import FirebaseAuth
 
 struct LogInView: View {
+    @EnvironmentObject var info: AppDelegate
+    
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showingAlert: Bool = false
     @State private var alertTitle: String = ""
     @State private var alertMessage: String = ""
     
-    @Binding var logInSuccess: Bool
-    
     var body: some View {
         NavigationView {
             ZStack {
                 BackgroundView()
-                Form {
-                    Section {
+                VStack {
+                    Form {
                         TextField("이메일", text: $email)
                             .keyboardType(.emailAddress)
                             .textContentType(.emailAddress)
@@ -32,22 +32,32 @@ struct LogInView: View {
                             .textContentType(.password)
                             .autocapitalization(.none)
                         Button(action: logIn, label: {
-                            Text("Log In")
+                            Text("Sign In")
                         })
                         .disabled((email.count < 3 || password.count < 8))
-                        GoogleLogInButtonView()
                     }
+                    .frame(height: 300)
+                    Spacer()
+                    GoogleLogInButtonView()
+
+                    HStack {
+                        Spacer()
+                        NavigationLink(destination: CreateUserView()) {
+                            Text("Sign Up")
+                                .font(.headline)
+                        }
+                        .buttonStyle(CardButtonStyle(shape: RoundedRectangle(cornerRadius: 15)))
+                    }
+                    .padding()
                     
-                    Section {
-                        NavigationLink(
-                            destination: CreateUserView(),
-                            label: {
-                                Text("회원 가입")
-                            })
-                    }
                 }
                 .background(Color("Background"))
+                
+                if info.onProcess {
+                    LoadingView(text: "Signing In...")
+                }
             }
+            .navigationBarTitle("pang!")
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .cancel())
             }
@@ -59,6 +69,7 @@ struct LogInView: View {
     
     func logIn() {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+            info.onProcess = true
             if let error = error {
                 print("Error while signing in : \(error.localizedDescription)")
                 alertTitle = "로그 인 에러"
@@ -93,13 +104,19 @@ struct LogInView: View {
                 showingAlert = true
                 return
             }
-            logInSuccess = true
+            
+            withAnimation {
+                info.onProcess = false
+                info.loginSuccess = true
+            }
         }
     }
 }
 
 struct LogInView_Previews: PreviewProvider {
     static var previews: some View {
-        LogInView(logInSuccess: .constant(false))
+        LogInView()
+            
+            
     }
 }

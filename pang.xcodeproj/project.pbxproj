@@ -11,6 +11,7 @@
 		4D176D35256A91CE00495876 /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D176D34256A91CE00495876 /* CardModifier.swift */; };
 		4D1C3DD825810209006E1AF8 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3DD725810209006E1AF8 /* LogInView.swift */; };
 		4D1C3DDB2581069C006E1AF8 /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1C3DDA2581069C006E1AF8 /* CreateUserView.swift */; };
+		4D1DB8242587997400D6B710 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1DB8232587997400D6B710 /* LoadingView.swift */; };
 		4D270DEA25654EC300D78D19 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D270DE925654EC300D78D19 /* SettingView.swift */; };
 		4D29F90E2570AB8300747289 /* String-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29F90D2570AB8300747289 /* String-extension.swift */; };
 		4D29F9112570AE3200747289 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29F9102570AE3200747289 /* MapView.swift */; };
@@ -65,6 +66,7 @@
 		4D176D34256A91CE00495876 /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 		4D1C3DD725810209006E1AF8 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		4D1C3DDA2581069C006E1AF8 /* CreateUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = "<group>"; };
+		4D1DB8232587997400D6B710 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4D270DE925654EC300D78D19 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		4D29F90D2570AB8300747289 /* String-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-extension.swift"; sourceTree = "<group>"; };
 		4D29F9102570AE3200747289 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				4DC168062564DC9300D792DB /* SystemImageButtonView.swift */,
 				4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */,
 				4D29F9102570AE3200747289 /* MapView.swift */,
+				4D1DB8232587997400D6B710 /* LoadingView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -522,6 +525,7 @@
 				4DCC7363256623490091878A /* View-extension.swift in Sources */,
 				4D7C6C9D2566B0E10041524F /* InputTypePickerView.swift in Sources */,
 				4DB1A266256B8FE300EC94A8 /* ImageButtonView.swift in Sources */,
+				4D1DB8242587997400D6B710 /* LoadingView.swift in Sources */,
 				4D82C2F9256A10880048E94A /* CardStyle.swift in Sources */,
 				4D1C3DDB2581069C006E1AF8 /* CreateUserView.swift in Sources */,
 				4DC168142564E7E700D792DB /* ImageSaver.swift in Sources */,

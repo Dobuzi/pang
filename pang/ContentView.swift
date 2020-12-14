@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var logInSuccess = false
+    @StateObject var info: AppDelegate
     @State private var pangs = Pangs()
     
     var body: some View {
         Group {
-            if logInSuccess {
+            if info.loginSuccess {
                 TabView {
                     HomeView(pangs: $pangs)
                         .tabItem { Label("Home", systemImage: "house") }
@@ -25,16 +25,15 @@ struct ContentView: View {
                     UITabBar.appearance().tintColor = UIColor(.offPurple)
                 }
             } else {
-                LogInView(logInSuccess: $logInSuccess)
-            }
-            
+                LogInView()
+            }   
         }
-        
+        .environmentObject(info)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(info: AppDelegate())
     }
 }
