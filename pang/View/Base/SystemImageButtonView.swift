@@ -20,7 +20,9 @@ struct SystemImageButtonView: View {
             Image(systemName: systemImage)
                 .font(.headline)
         })
-        .buttonStyle(CardButtonStyle(shape: Circle()))
+//        .buttonStyle(CardButtonStyle(shape: Circle()))
+        .padding()
+        .glassCardStyle(shape: Circle())
     }
 }
 

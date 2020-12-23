@@ -13,7 +13,8 @@ struct AuthorImageView: View {
             .font(.headline)
             .foregroundColor(.offPurple)
             .padding()
-            .cardBackgroundStyle(isHighlighted: false, shape: Circle())
+//            .cardBackgroundStyle(isHighlighted: false, shape: Circle())
+            .glassCardStyle(shape: Circle())
     }
 }
 

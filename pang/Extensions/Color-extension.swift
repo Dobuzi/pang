@@ -18,4 +18,15 @@ extension Color {
     
     static let lightStart = Color(red: 60 / 255, green: 160 / 255, blue: 240 / 255)
     static let lightEnd = Color(red: 30 / 255, green: 80 / 255, blue: 120 / 255)
+    
+    static func random() -> Color {
+        Color(.sRGB, red: Double.random(in: 0...1), green: Double.random(in: 0...1), blue: Double.random(in: 0...1), opacity: 1)
+    }
+    
+    init(rgb: Int) {
+        self.init(red: Double((rgb & 0xFF0000) >> 16) / 255,
+                  green: Double((rgb & 0x00FF00) >> 8) / 255,
+                  blue: Double(rgb & 0x0000FF) / 255
+        )
+    }
 }

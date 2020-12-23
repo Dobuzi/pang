@@ -18,7 +18,6 @@ struct MapButtonView: View {
         }) {
             Label("Zone", systemImage: "mappin.and.ellipse")
         }
-        .foregroundColor(.offPurple)
         .sheet(isPresented: $showingSheet) {
             PangZoneView(locationManager: $locationManager)
         }

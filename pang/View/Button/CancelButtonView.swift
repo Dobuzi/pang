@@ -22,8 +22,8 @@ struct CancelButtonView: View {
             
         })
         .foregroundColor(.red)
-        .buttonStyle(CardButtonStyle(shape: Capsule()))
-        
+        .padding()
+        .glassCardStyle(shape: Capsule())
     }
 }
 

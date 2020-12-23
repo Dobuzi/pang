@@ -9,8 +9,10 @@ import SwiftUI
 
 struct BackgroundView: View {
     var body: some View {
-        Color("Background")
-            .edgesIgnoringSafeArea(.all)
+        GlassBackgroundStyle()
+            .onTapGesture {
+                self.hideKeyboard()
+            }
     }
 }
 

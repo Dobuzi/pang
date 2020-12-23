@@ -17,7 +17,9 @@ struct ImageButtonView: View {
         Button(action: { self.showingImagePicker = true }){
             Image(systemName: "photo")
         }
-        .buttonStyle(CardButtonStyle(shape: Circle()))
+//        .buttonStyle(CardButtonStyle(shape: Circle()))
+        .padding()
+        .glassCardStyle(shape: Circle())
         .sheet(isPresented: $showingImagePicker, onDismiss: loadImage)  {
             ImagePicker(image: self.$inputImage)
         }

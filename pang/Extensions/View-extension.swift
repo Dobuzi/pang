@@ -17,6 +17,10 @@ extension View {
         self.modifier(CardBackgroundStyleModifier(isHighlighted: isHighlighted, shape: shape))
     }
     
+    func glassCardStyle<S: Shape>(shape: S) -> some View {
+        self.modifier(GlassCardStyleModifier(shape: shape))
+    }
+    
     func keyboardAdaptive(edge: Edge.Set) -> some View {
         ModifiedContent(content: self, modifier: KeyboardAdaptive(edge: edge))
     }

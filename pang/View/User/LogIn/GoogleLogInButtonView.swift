@@ -18,10 +18,10 @@ struct GoogleLogInButtonView: View {
                     .fontWeight(.bold)
                     .foregroundColor(colorScheme == .light ? .secondary : .white)
                 },
-                icon: { Image("btn_google_light_normal_ios") }
+                icon: { Image("btn_google_light_normal_ios").opacity(0.8) }
             )
             .padding(.trailing)
-            .background(Color("Google"))
+            .background(Color("Google").opacity(0.8))
             .cornerRadius(5)
             .shadow(radius: 5)
         }
@@ -37,9 +37,9 @@ struct GoogleLogInButtonView: View {
 
 struct GoogleLogInButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        GoogleLogInButtonView()
-            
-            
-            
+        ZStack {
+            BackgroundView()
+            GoogleLogInButtonView()
+        }
     }
 }

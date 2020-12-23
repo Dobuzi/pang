@@ -10,7 +10,7 @@ import SwiftUI
 struct FullSizeImageView: View {
     let uiImage: UIImage
     
-    @GestureState private var scale: CGFloat = 1.0
+    @GestureState private var scale: CGFloat = 1
     
     var body: some View {
         ZStack {
@@ -33,6 +33,6 @@ struct FullSizeImageView: View {
 
 struct FullSizeImageView_Previews: PreviewProvider {
     static var previews: some View {
-        FullSizeImageView(uiImage: UIImage(imageLiteralResourceName: "sample-h"))
+        FullSizeImageView(uiImage: UIImage(imageLiteralResourceName: "sample-s"))
     }
 }

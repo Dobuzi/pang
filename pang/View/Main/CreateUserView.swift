@@ -33,7 +33,9 @@ struct CreateUserView: View {
     var body: some View {
         ZStack {
             BackgroundView()
-            Form {
+            VStack {
+                Spacer()
+                TitleView()
                 Section {
                     HStack {
                         TextField("이메일", text: $newEmail)
@@ -43,6 +45,8 @@ struct CreateUserView: View {
                             .autocapitalization(.none)
                         Image(systemName: emailIsValid ? "checkmark" : "xmark")
                             .foregroundColor(emailIsValid ? .green : .red)
+                            .padding()
+                            .glassCardStyle(shape: Circle())
                     }
                     HStack {
                         SecureField("비밀번호", text: $newPassword1)
@@ -51,6 +55,8 @@ struct CreateUserView: View {
                             .keyboardType(.default)
                         Image(systemName: password1IsValid ? "checkmark" : "xmark")
                             .foregroundColor(password1IsValid ? .green : .red)
+                            .padding()
+                            .glassCardStyle(shape: Circle())
                     }
                     
                     HStack {
@@ -60,6 +66,8 @@ struct CreateUserView: View {
                             .keyboardType(.default)
                         Image(systemName: password2IsValid ? "checkmark" : "xmark")
                             .foregroundColor(password2IsValid ? .green : .red)
+                            .padding()
+                            .glassCardStyle(shape: Circle())
                     }
                     HStack {
                         Capsule(style: .continuous)
@@ -75,7 +83,9 @@ struct CreateUserView: View {
                             .foregroundColor(secureLevel > 2 ? .green : .secondary)
                             .opacity(0.5)
                     }
+                    InfoButtonView(showingInfo: $showingSecureInfo, labelTitle: infoTitle, title: infoTitle, message: infoMessage)
                 }
+                .padding()
                 .onChange(of: newEmail, perform: checkEmail)
                 .onChange(of: newPassword1, perform: checkPassword1)
                 .onChange(of: newPassword2, perform: checkPassword2)
@@ -84,17 +94,22 @@ struct CreateUserView: View {
                         self.hideKeyboard()
                     }
                 }
-                
-                Section {
-                    InfoButtonView(showingInfo: $showingSecureInfo, labelTitle: infoTitle, title: infoTitle, message: infoMessage)
+                Spacer()
+                HStack {
+                    CancelButtonView(withText: false)
+                    Spacer()
+                    Button(action: createUser) { Text("회원 가입") }
+                        .disabled(!(emailIsValid && password1IsValid && password2IsValid))
+                        .padding()
+                        .glassCardStyle(shape: Capsule())
                 }
             }
+            .padding()
+            
             if info.onProcess {
                 LoadingView(text: "Signing In...")
             }
         }
-        .navigationBarItems(trailing: Button(action: createUser) { Text("회원 가입") }
-                                .disabled(!(emailIsValid && password1IsValid && password2IsValid)))
         .alert(isPresented: $showingAlert) {
             Alert(
                 title: Text(alertTitle),
@@ -102,6 +117,7 @@ struct CreateUserView: View {
                 dismissButton: .default(Text("OK")) { presentationMode.wrappedValue.dismiss() }
             )
         }
+        
     }
     
     func checkEmail(_ email: String) {
@@ -170,17 +186,20 @@ struct CreateUserView: View {
         Auth.auth().createUser(withEmail: newEmail, password: newPassword1) { authResult, error in
             if let error = error {
                 print("\(error.localizedDescription)")
+                info.onProcess = false
                 return
             }
             
             guard let authResult = authResult else {
                 print("No authResult.")
+                info.onProcess = false
                 return
             }
             
             authResult.user.sendEmailVerification { error in
                 if let error = error {
                     print(error.localizedDescription)
+                    info.onProcess = false
                     return
                 } else {
                     print("Success to create user")
@@ -197,9 +216,7 @@ struct CreateUserView: View {
 
 struct CreateUserView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            CreateUserView()
-        }
-        .preferredColorScheme(.dark)
+        CreateUserView()
+            .environmentObject(AppDelegate())
     }
 }

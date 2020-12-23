@@ -21,12 +21,11 @@ struct ContentView: View {
                         .tabItem { Label("Setting", systemImage: "gear") }
                 }
                 .onAppear {
-                    UITabBar.appearance().barTintColor = UIColor(Color("Background"))
-                    UITabBar.appearance().tintColor = UIColor(.offPurple)
+                    UITabBar.appearance().barTintColor = .clear
                 }
             } else {
                 LogInView()
-            }   
+            }
         }
         .environmentObject(info)
     }

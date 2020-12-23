@@ -13,8 +13,7 @@ struct MapView: View {
     @Binding var region: MKCoordinateRegion
     @Binding var locationManager: CLLocationManager
     private var location: Location {
-        guard let currentLocation = locationManager.location else { return Location(coordinate: Location.SeoulCoordinate) }
-        return Location(coordinate: currentLocation.coordinate)
+        Location(coordinate: locationManager.location?.coordinate ?? Location.SeoulCoordinate)
     }
     private let diameter: CGFloat = 200
     

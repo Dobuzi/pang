@@ -18,14 +18,11 @@ struct PangButtonView: View {
     
     var body: some View {
         Button(action: self.uploadPang) {
-            HStack {
-                Label(
-                    title: { Text("pang!") },
-                    icon: { Image(systemName: "burst") }
-                )
-            }
+            Text("pang!")
         }
-        .buttonStyle(CardButtonStyle(shape: Capsule()))
+//        .buttonStyle(CardButtonStyle(shape: Capsule()))
+        .padding()
+        .glassCardStyle(shape: Capsule())
     }
     
     func uploadPang() {

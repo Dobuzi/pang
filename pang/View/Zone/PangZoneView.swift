@@ -32,7 +32,6 @@ struct PangZoneView: View {
             BackgroundView()
             VStack {
                 MapView(userTrackingMode: $userTrackingMode, region: $region, locationManager: $locationManager)
-                    .cardBackgroundStyle(isHighlighted: false, shape: Rectangle())
                 HStack {
                     CancelButtonView(withText: false)
                     Spacer()
@@ -41,7 +40,7 @@ struct PangZoneView: View {
                     SystemImageButtonView(systemImage: "location.fill", content: getLocation)
                         .foregroundColor(.blue)
                 }
-                .frame(height: 80)
+                .frame(height: 40)
                 .padding()
             }
         }

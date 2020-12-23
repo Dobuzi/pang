@@ -16,11 +16,11 @@ struct LoadingView: View {
             VStack {
                 Text(text)
                     .font(.headline)
-                    .foregroundColor(.secondary)
                 ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .offPurple))
             }
             .padding(30)
-            .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 15))
+            .glassCardStyle(shape: RoundedRectangle(cornerRadius: 15))
         }
         
     }
@@ -28,6 +28,6 @@ struct LoadingView: View {
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingView(text: "Loading...")
+        LoadingView(text: "준비 중...")
     }
 }

@@ -37,7 +37,7 @@ struct PangTextFieldView: View {
                         }
                     }
                     .onAppear {
-                        UITextView.appearance().backgroundColor = UIColor(named: "Background")
+                        UITextView.appearance().backgroundColor = .clear
                     }
             }
             

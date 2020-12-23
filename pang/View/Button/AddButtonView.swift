@@ -19,7 +19,6 @@ struct AddButtonView: View {
         }) {
             Label("Add", systemImage: "plus.circle")
         }
-        .foregroundColor(.offPurple)
         .sheet(isPresented: $showingSheet) {
             PangInputView(pangs: $pangs, locationManager: $locationManager)
         }

@@ -33,7 +33,8 @@ struct CardView: View {
                     }
                 }
                 .padding()
-                .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 15))
+//                .cardBackgroundStyle(isHighlighted: false, shape: RoundedRectangle(cornerRadius: 15))
+                .glassCardStyle(shape: RoundedRectangle(cornerRadius: 15))
                 .frame(height: (pang.images.count > 0 && pang.text != nil) ? 160 : 140)
                 .padding(.vertical, 5)
                 .padding(.horizontal, 10)
@@ -60,12 +61,16 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(Pangs.example.zonePangs) { pang in
-                    CardView(pang: pang)
+        ZStack {
+            BackgroundView()
+            ScrollView {
+                LazyVStack {
+                    ForEach(Pangs.example.zonePangs) { pang in
+                        CardView(pang: pang)
+                    }
                 }
             }
         }
+        
     }
 }

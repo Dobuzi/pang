@@ -18,7 +18,13 @@
 		4D29F9142570B1BE00747289 /* MapKit-extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D29F9132570B1BE00747289 /* MapKit-extension.swift */; };
 		4D3551FC2564035800A6EF2B /* Light-Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */; };
 		4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FF25640B1700A6EF2B /* BackgroundView.swift */; };
+		4D4737B52592FF64006DC4EC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4737B42592FF64006DC4EC /* TitleView.swift */; };
+		4D4CF5B12590D9790038535C /* LogInFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF5B02590D9790038535C /* LogInFormView.swift */; };
+		4D4CF5B42590DAE50038535C /* OrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF5B32590DAE50038535C /* OrView.swift */; };
 		4D5A9CAA25848AB00007C839 /* InfoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A9CA925848AB00007C839 /* InfoButtonView.swift */; };
+		4D5F626D258B48750096F907 /* GlassStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F626C258B48750096F907 /* GlassStyle.swift */; };
+		4D5F6270258B4E8D0096F907 /* GlassModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F626F258B4E8D0096F907 /* GlassModifier.swift */; };
+		4D5F6274258B4F4F0096F907 /* ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F6273258B4F4F0096F907 /* ex.swift */; };
 		4D7C6C9A2566A70C0041524F /* PangImageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C6C992566A70C0041524F /* PangImageInputView.swift */; };
 		4D7C6C9D2566B0E10041524F /* InputTypePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C6C9C2566B0E10041524F /* InputTypePickerView.swift */; };
 		4D82C2F42569DA840048E94A /* CardContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82C2F32569DA840048E94A /* CardContentView.swift */; };
@@ -45,9 +51,6 @@
 		4DB1A260256B881B00EC94A8 /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */; };
 		4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */; };
 		4DB1A266256B8FE300EC94A8 /* ImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1A265256B8FE300EC94A8 /* ImageButtonView.swift */; };
-		4DC167FE2564D00500D792DB /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC167FD2564D00500D792DB /* TitleView.swift */; };
-		4DC168012564D25400D792DB /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168002564D25400D792DB /* LogoView.swift */; };
-		4DC168042564D29900D792DB /* BrandNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168032564D29900D792DB /* BrandNameView.swift */; };
 		4DC168072564DC9300D792DB /* SystemImageButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168062564DC9300D792DB /* SystemImageButtonView.swift */; };
 		4DC1680B2564DF9900D792DB /* PangListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC1680A2564DF9900D792DB /* PangListView.swift */; };
 		4DC168112564E73A00D792DB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC168102564E73A00D792DB /* ImagePicker.swift */; };
@@ -73,7 +76,13 @@
 		4D29F9132570B1BE00747289 /* MapKit-extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit-extension.swift"; sourceTree = "<group>"; };
 		4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Light-Neumorphism.swift"; sourceTree = "<group>"; };
 		4D3551FF25640B1700A6EF2B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		4D4737B42592FF64006DC4EC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		4D4CF5B02590D9790038535C /* LogInFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInFormView.swift; sourceTree = "<group>"; };
+		4D4CF5B32590DAE50038535C /* OrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrView.swift; sourceTree = "<group>"; };
 		4D5A9CA925848AB00007C839 /* InfoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButtonView.swift; sourceTree = "<group>"; };
+		4D5F626C258B48750096F907 /* GlassStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassStyle.swift; sourceTree = "<group>"; };
+		4D5F626F258B4E8D0096F907 /* GlassModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassModifier.swift; sourceTree = "<group>"; };
+		4D5F6273258B4F4F0096F907 /* ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ex.swift; sourceTree = "<group>"; };
 		4D7C6C992566A70C0041524F /* PangImageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangImageInputView.swift; sourceTree = "<group>"; };
 		4D7C6C9C2566B0E10041524F /* InputTypePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTypePickerView.swift; sourceTree = "<group>"; };
 		4D82C2F32569DA840048E94A /* CardContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardContentView.swift; sourceTree = "<group>"; };
@@ -102,9 +111,6 @@
 		4DB1A25F256B881B00EC94A8 /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
 		4DB1A262256B8DC000EC94A8 /* CancelButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelButtonView.swift; sourceTree = "<group>"; };
 		4DB1A265256B8FE300EC94A8 /* ImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButtonView.swift; sourceTree = "<group>"; };
-		4DC167FD2564D00500D792DB /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
-		4DC168002564D25400D792DB /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
-		4DC168032564D29900D792DB /* BrandNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandNameView.swift; sourceTree = "<group>"; };
 		4DC168062564DC9300D792DB /* SystemImageButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemImageButtonView.swift; sourceTree = "<group>"; };
 		4DC1680A2564DF9900D792DB /* PangListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PangListView.swift; sourceTree = "<group>"; };
 		4DC168102564E73A00D792DB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -147,13 +153,13 @@
 			isa = PBXGroup;
 			children = (
 				4D3551FF25640B1700A6EF2B /* BackgroundView.swift */,
-				4DC167FD2564D00500D792DB /* TitleView.swift */,
-				4DC168002564D25400D792DB /* LogoView.swift */,
-				4DC168032564D29900D792DB /* BrandNameView.swift */,
 				4DC168062564DC9300D792DB /* SystemImageButtonView.swift */,
 				4DB00E14256E2585007B3DC4 /* FullSizeImageView.swift */,
 				4D29F9102570AE3200747289 /* MapView.swift */,
 				4D1DB8232587997400D6B710 /* LoadingView.swift */,
+				4D4CF5B02590D9790038535C /* LogInFormView.swift */,
+				4D4CF5B32590DAE50038535C /* OrView.swift */,
+				4D4737B42592FF64006DC4EC /* TitleView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -173,6 +179,16 @@
 				4D5A9CA925848AB00007C839 /* InfoButtonView.swift */,
 			);
 			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		4D5F626B258B48650096F907 /* Glass */ = {
+			isa = PBXGroup;
+			children = (
+				4D5F626F258B4E8D0096F907 /* GlassModifier.swift */,
+				4D5F626C258B48750096F907 /* GlassStyle.swift */,
+				4D5F6273258B4F4F0096F907 /* ex.swift */,
+			);
+			path = Glass;
 			sourceTree = "<group>";
 		};
 		4D82C2F6256A10560048E94A /* Neumorphism */ = {
@@ -314,6 +330,7 @@
 		4D9A6D2E2563F812008DE863 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				4D5F626B258B48650096F907 /* Glass */,
 				4D82C2F7256A10610048E94A /* Card */,
 				4D82C2F6256A10560048E94A /* Neumorphism */,
 			);
@@ -514,15 +531,17 @@
 				4DE6950025638F2A00FBCE31 /* Gradient-extension.swift in Sources */,
 				4DB00E15256E2585007B3DC4 /* FullSizeImageView.swift in Sources */,
 				4D9A6D342563FCC2008DE863 /* Dark-Neumorphism.swift in Sources */,
+				4D4CF5B42590DAE50038535C /* OrView.swift in Sources */,
 				4DE695072563932500FBCE31 /* AuthorImageView.swift in Sources */,
 				4D29F9112570AE3200747289 /* MapView.swift in Sources */,
 				4DB1A263256B8DC000EC94A8 /* CancelButtonView.swift in Sources */,
+				4D4CF5B12590D9790038535C /* LogInFormView.swift in Sources */,
 				4DA05ABB256F7937004E8859 /* Notification-extension.swift in Sources */,
 				4D93EA572562B72400323612 /* CardView.swift in Sources */,
 				4DA05AB4256F7090004E8859 /* Pangs.swift in Sources */,
-				4DC167FE2564D00500D792DB /* TitleView.swift in Sources */,
 				4D270DEA25654EC300D78D19 /* SettingView.swift in Sources */,
 				4DCC7363256623490091878A /* View-extension.swift in Sources */,
+				4D5F6274258B4F4F0096F907 /* ex.swift in Sources */,
 				4D7C6C9D2566B0E10041524F /* InputTypePickerView.swift in Sources */,
 				4DB1A266256B8FE300EC94A8 /* ImageButtonView.swift in Sources */,
 				4D1DB8242587997400D6B710 /* LoadingView.swift in Sources */,
@@ -530,9 +549,10 @@
 				4D1C3DDB2581069C006E1AF8 /* CreateUserView.swift in Sources */,
 				4DC168142564E7E700D792DB /* ImageSaver.swift in Sources */,
 				4D29F9142570B1BE00747289 /* MapKit-extension.swift in Sources */,
-				4DC168012564D25400D792DB /* LogoView.swift in Sources */,
 				4D93EA372562A11D00323612 /* HomeView.swift in Sources */,
 				4DA308DE2574C7C90068E629 /* PangZoneView.swift in Sources */,
+				4D5F6270258B4E8D0096F907 /* GlassModifier.swift in Sources */,
+				4D5F626D258B48750096F907 /* GlassStyle.swift in Sources */,
 				4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */,
 				4DB1A260256B881B00EC94A8 /* AddButtonView.swift in Sources */,
 				4D93EA282562A09600323612 /* ContentView.swift in Sources */,
@@ -547,6 +567,7 @@
 				4DD9A3C8258510F500D801ED /* GoogleLogInButtonView.swift in Sources */,
 				4D93EA442562AC1E00323612 /* PangButtonView.swift in Sources */,
 				4D29F90E2570AB8300747289 /* String-extension.swift in Sources */,
+				4D4737B52592FF64006DC4EC /* TitleView.swift in Sources */,
 				4D176D35256A91CE00495876 /* CardModifier.swift in Sources */,
 				4D9A6D302563F832008DE863 /* Neumorphism.swift in Sources */,
 				4D82C2F42569DA840048E94A /* CardContentView.swift in Sources */,
@@ -554,7 +575,6 @@
 				4D93EA262562A09600323612 /* pangApp.swift in Sources */,
 				4D93EA492562AE3400323612 /* PangInputView.swift in Sources */,
 				4D93EA3C2562A1CB00323612 /* Pang.swift in Sources */,
-				4DC168042564D29900D792DB /* BrandNameView.swift in Sources */,
 				4D3551FC2564035800A6EF2B /* Light-Neumorphism.swift in Sources */,
 				4DE694FC256386E600FBCE31 /* Color-extension.swift in Sources */,
 				4D7C6C9A2566A70C0041524F /* PangImageInputView.swift in Sources */,
