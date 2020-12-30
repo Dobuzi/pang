@@ -11,17 +11,19 @@ import GoogleSignIn
 struct GoogleLogInButtonView: View {
     @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject var info: AppDelegate
+    
     var body: some View {
         Button(action: self.signInWithGoogle) {
-            Label(
-                title: { Text("Sign in with Google")
+            HStack {
+                Image("btn_google_light_normal_ios")
+                Spacer()
+                Text("Google")
                     .fontWeight(.bold)
-                    .foregroundColor(colorScheme == .light ? .secondary : .white)
-                },
-                icon: { Image("btn_google_light_normal_ios").opacity(0.8) }
-            )
-            .padding(.trailing)
-            .background(Color("Google").opacity(0.8))
+                    .foregroundColor(.secondary)
+                Spacer()
+            }
+            .frame(width: 130, height: 50)
+            .background(Color("Google").opacity(0.2))
             .cornerRadius(5)
             .shadow(radius: 5)
         }

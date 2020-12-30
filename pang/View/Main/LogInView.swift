@@ -24,6 +24,7 @@ struct LogInView: View {
                     .opacity(0.5)
                     .padding()
                 GoogleLogInButtonView()
+                GithubLogInButtonView()
                 Spacer()
                 HStack {
                     Spacer()

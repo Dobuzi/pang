@@ -19,6 +19,7 @@
 		4D3551FC2564035800A6EF2B /* Light-Neumorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */; };
 		4D35520025640B1700A6EF2B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3551FF25640B1700A6EF2B /* BackgroundView.swift */; };
 		4D4737B52592FF64006DC4EC /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4737B42592FF64006DC4EC /* TitleView.swift */; };
+		4D4737B82593062F006DC4EC /* GithubLogInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4737B72593062F006DC4EC /* GithubLogInButtonView.swift */; };
 		4D4CF5B12590D9790038535C /* LogInFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF5B02590D9790038535C /* LogInFormView.swift */; };
 		4D4CF5B42590DAE50038535C /* OrView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CF5B32590DAE50038535C /* OrView.swift */; };
 		4D5A9CAA25848AB00007C839 /* InfoButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A9CA925848AB00007C839 /* InfoButtonView.swift */; };
@@ -77,6 +78,7 @@
 		4D3551FB2564035800A6EF2B /* Light-Neumorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Light-Neumorphism.swift"; sourceTree = "<group>"; };
 		4D3551FF25640B1700A6EF2B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		4D4737B42592FF64006DC4EC /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		4D4737B72593062F006DC4EC /* GithubLogInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubLogInButtonView.swift; sourceTree = "<group>"; };
 		4D4CF5B02590D9790038535C /* LogInFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInFormView.swift; sourceTree = "<group>"; };
 		4D4CF5B32590DAE50038535C /* OrView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrView.swift; sourceTree = "<group>"; };
 		4D5A9CA925848AB00007C839 /* InfoButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoButtonView.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				4DD9A3C7258510F500D801ED /* GoogleLogInButtonView.swift */,
+				4D4737B72593062F006DC4EC /* GithubLogInButtonView.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				4D82C2F42569DA840048E94A /* CardContentView.swift in Sources */,
 				4DA05AB8256F780F004E8859 /* Publishers-extension.swift in Sources */,
 				4D93EA262562A09600323612 /* pangApp.swift in Sources */,
+				4D4737B82593062F006DC4EC /* GithubLogInButtonView.swift in Sources */,
 				4D93EA492562AE3400323612 /* PangInputView.swift in Sources */,
 				4D93EA3C2562A1CB00323612 /* Pang.swift in Sources */,
 				4D3551FC2564035800A6EF2B /* Light-Neumorphism.swift in Sources */,
